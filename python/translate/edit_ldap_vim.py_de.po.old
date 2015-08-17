@@ -1,0 +1,94 @@
+# edit_ldap_vim.py.
+# Copyright (C) 2012 Leander Jedamus
+# This file is distributed under the same license as the edit_ldap_vim.py package.
+# ljedamus@gmail.com, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: edit_ldap_vim.py 1.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-19 11:29+0100\n"
+"PO-Revision-Date: 2013-03-15 11:23+0100\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: edit_ldap_vim.py:104 edit_ldap_vim.py:233
+msgid "Change picture"
+msgstr "Bild ändern"
+
+#: edit_ldap_vim.py:106
+msgid "Insert picture"
+msgstr "Bild einfügen"
+
+#: edit_ldap_vim.py:147
+msgid "Save"
+msgstr "Speichern"
+
+#: edit_ldap_vim.py:149
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: edit_ldap_vim.py:169 edit_ldap_vim.py:197 edit_ldap_vim.py:298
+#: edit_ldap_vim.py:337 edit_ldap_vim.py:354
+msgid "LDAP Error"
+msgstr "LDAP Fehler"
+
+#: edit_ldap_vim.py:206
+msgid "Object has been deleted"
+msgstr "Objekt wurde gelöscht"
+
+#: edit_ldap_vim.py:207
+msgid "Object has been deleted. Do you really want to continue?"
+msgstr "Objekt wurde gelöscht. Wollen Sie wirklich weitermachen?"
+
+#: edit_ldap_vim.py:217
+msgid "JPEG-Filename"
+msgstr "JPEG-Dateiname"
+
+#: edit_ldap_vim.py:219
+msgid "JPEG-Files (*.jpg)"
+msgstr "JPEG-Dateien (*.jpg)"
+
+#: edit_ldap_vim.py:262
+msgid "&Edit..."
+msgstr "&Bearbeiten..."
+
+#: edit_ldap_vim.py:263
+msgid "&New"
+msgstr "&Neu"
+
+#: edit_ldap_vim.py:264
+msgid "&Remove"
+msgstr "&Entfernen"
+
+#: edit_ldap_vim.py:279 edit_ldap_vim.py:373
+msgid "Ok"
+msgstr "Ok"
+
+#: edit_ldap_vim.py:304
+msgid "Edit entry"
+msgstr "Eintrag editieren"
+
+#: edit_ldap_vim.py:310
+msgid "Enter Uid:"
+msgstr "Uid eingeben:"
+
+#: edit_ldap_vim.py:344
+msgid "Remove uid {l:s}"
+msgstr "uid {l:s} entfernen"
+
+#: edit_ldap_vim.py:345
+msgid "Do you really want to remove uid={l:s} ?"
+msgstr "Wollen Sie wirklich die uid={l:s} entfernen ?"
+
+#: edit_ldap_vim.py:419
+msgid "Invalid credentials"
+msgstr "Ungültige Credentialien"
+
+#~ msgid "password for %s: "
+#~ msgstr "Paßwort für %s:"

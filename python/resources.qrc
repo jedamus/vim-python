@@ -1,0 +1,8 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+<file alias="add.png">images/add.png</file>
+<file alias="delete.png">images/delete.png</file>
+<file alias="quit.png">images/quit.png</file>
+<file alias="icon.png">images/accessories-text-editor.png</file>
+</qresource>
+</RCC>

@@ -1,0 +1,46 @@
+# edit_mysql_vim.py.
+# Copyright (C) 2012 Leander Jedamus
+# This file is distributed under the same license as the edit_mysql_vim.py package.
+# ljedamus@gmail.com, 2012.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: edit_mysql_vim.py 1.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-02-25 13:01+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Leander Jedamus <ljedamus@gmail.com>\n"
+"Language-Team: Leander Jedamus <ljedamus@gmail.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: edit_mysql_vim.py:46
+msgid "Id"
+msgstr ""
+
+#: edit_mysql_vim.py:47
+msgid "Email"
+msgstr ""
+
+#: edit_mysql_vim.py:48
+msgid "WWW"
+msgstr ""
+
+#: edit_mysql_vim.py:49
+msgid "Package"
+msgstr ""
+
+#: edit_mysql_vim.py:59
+msgid "&Add"
+msgstr ""
+
+#: edit_mysql_vim.py:60
+msgid "&Delete"
+msgstr ""
+
+#: edit_mysql_vim.py:61
+msgid "&OK"
+msgstr ""

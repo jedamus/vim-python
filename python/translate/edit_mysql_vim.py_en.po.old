@@ -1,0 +1,58 @@
+# edit_mysql_vim.py.
+# Copyright (C) 2012 Leander Jedamus
+# This file is distributed under the same license as the edit_mysql_vim.py package.
+# ljedamus@gmail.com, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: edit_mysql_vim.py 1.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-02-25 13:01+0100\n"
+"PO-Revision-Date: 2013-02-25 11:12+0100\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: edit_mysql_vim.py:46
+msgid "Id"
+msgstr "Id"
+
+#: edit_mysql_vim.py:47
+msgid "Email"
+msgstr "Email"
+
+#: edit_mysql_vim.py:48
+msgid "WWW"
+msgstr "WWW"
+
+#: edit_mysql_vim.py:49
+msgid "Package"
+msgstr "Package"
+
+#: edit_mysql_vim.py:59
+msgid "&Add"
+msgstr "&Add"
+
+#: edit_mysql_vim.py:60
+msgid "&Delete"
+msgstr "&Delete"
+
+#: edit_mysql_vim.py:61
+msgid "&OK"
+msgstr "&OK"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Edit..."
+
+#~ msgid "&New"
+#~ msgstr "&New"
+
+#~ msgid "&Remove"
+#~ msgstr "&Remove"
+
+#~ msgid "Close"
+#~ msgstr "Close"
