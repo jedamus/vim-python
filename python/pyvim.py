@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Montag, 31. Dezember 2012 07:57 (C) 2012 by Leander Jedamus
+# modifiziert Mittwoch, 09. August 2017 22:49 von Leander Jedamus
 # modifiziert Sonntag, 16. August 2015 19:17 von Leander Jedamus
 # modifiziert Samstag, 04. Juli 2015 14:00 von Leander Jedamus
 # modifiziert Samstag, 06. April 2013 04:32 von Leander Jedamus
@@ -24,7 +25,7 @@ import sys
 import inspect
 import pwd
 import gettext
-#import MySQLdb as mdb
+import MySQLdb as mdb
 
 import vim
 
@@ -37,7 +38,8 @@ scriptpath = os.path.realpath(os.path.abspath(os.path.split( \
         #scriptpath = path
 try:
     trans = gettext.translation(scriptname,os.path.join(scriptpath,"translate"))
-    trans.install(unicode=False)
+    #trans.install(unicode=False)
+    trans.install()
 except IOError:
     def _ (s):
         return s
@@ -54,6 +56,10 @@ y  = time.strftime("%Y")
 www = "www.ljedamus.de"
 email = "ljedamus@testemail.com"
 package = "de.ljedamus"
+
+www = ""
+email = ""
+package = ""
 
 def M(linenr,prefix="",suffix=""):
   b = vim.current.buffer
@@ -87,18 +93,18 @@ def bn():
 def db():
     global email, www, package
     try:
-        conn = mdb.connect('localhost','vim','ViM','vim');
+        conn = mdb.connect('192.168.2.109','vim','ViM','vim');
         #cursor = conn.cursor()
         cursor = conn.cursor (mdb.cursors.DictCursor)
         cursor.execute("SELECT email, www, package FROM variables WHERE Id=%s",
-                       (i))
+                       (i,))
         # (email, www, package) = cursor.fetchone()
         row = cursor.fetchone()
         email   = row["email"]
         www     = row["www"]
         package = row["package"]
         return row
-    except mdb.Error,e:
+    except mdb.Error as e:
         print("Error {errno:d}: {error:s}".format(errno=e.args[0],
                                                   error=e.args[1]))
 
