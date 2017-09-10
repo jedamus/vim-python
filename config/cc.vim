@@ -1,4 +1,4 @@
-autocmd BufNewFile *.c py3file ~/vim/python/vim_cc_neu.py
-autocmd BufWritePre *.c py3file ~/vim/python/vim_cc_geaendert.py
-autocmd BufNewFile *.cc py3file ~/vim/python/vim_cc_neu.py
-autocmd BufWritePre *.cc py3file ~/vim/python/vim_cc_geaendert.py
+autocmd BufNewFile *.c pyfile ~/vim/python/vim_cc_neu.py
+autocmd BufWritePre *.c pyfile ~/vim/python/vim_cc_geaendert.py
+autocmd BufNewFile *.cc pyfile ~/vim/python/vim_cc_neu.py
+autocmd BufWritePre *.cc pyfile ~/vim/python/vim_cc_geaendert.py
