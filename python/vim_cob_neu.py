@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Freitag, 28. Dezember 2012 16:10 (C) 2012 by Leander Jedamus
+# modifiziert Mittwoch, 13. September 2017 09:45 von Leander Jedamus
 # modifiziert Samstag, 04. Juli 2015 14:00 von Leander Jedamus
 # modifiziert Samstag, 23. Februar 2013 10:35 von Leander Jedamus
 # modifiziert Dienstag, 19. Februar 2013 10:40 von Leander Jedamus
@@ -24,7 +25,9 @@ p.b()[0:0] = [ "      * " + p.c(),
 	       "      * " + p.by(),
 	       "",
 	       "       IDENTIFICATION DIVISION.",
-	       "       PROGRAM-ID. "+ n +".",
+	       "       PROGRAM-ID. "+ n + ".",
+               "       AUTHOR. " + p.u + ".",
+               "       DATE-WRITTEN. " + p.dt + ".",
 	       "       ",
 	       "       ENVIRONMENT DIVISION.",
 	       "       CONFIGURATION SECTION.",
@@ -33,7 +36,7 @@ p.b()[0:0] = [ "      * " + p.c(),
 	       "       FILE-CONTROL.",
 	       "           SELECT",
 	       "           ASSIGN TO",
-	       "           ORGANIZATION IS",
+	       "           ORGANIZATION IS LINE SEQUENTIAL",
 	       "           .",
 	       "       ",
 	       "       DATA DIVISION.",
@@ -52,12 +55,12 @@ p.b()[0:0] = [ "      * " + p.c(),
 	       "      *",
 	       "       PROCEDURE DIVISION.",
 	       "       ",
-	       "       GOBACK.",
+	       "       STOP RUN.",
 	       "       END PROGRAM " + n + ".",
 	       "       ",
-	       "      * vim:ai sw=4 sts=4"
+	       "      * vim:ai sw=4 sts=4 expandtab"
              ]
-vim.command("normal 32k3w")
+vim.command("normal 34k3w")
 
 # vim:ai sw=2 sts=4 expandtab
 
