@@ -4,6 +4,9 @@ set softtabstop=4
 set background=dark
 syntax enable
 
+set modeline
+set modelines=2
+
 "set mouse=a
 
 "set fileencoding=utf-8
