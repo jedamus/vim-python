@@ -1,0 +1,85 @@
+source ~/.exrc
+set softtabstop=4
+
+set background=dark
+syntax enable
+
+set modeline
+set modelines=2
+
+"set mouse=a
+
+"set fileencoding=utf-8
+"set fileencoding=iso-8859-1
+
+"set encoding=utf-8
+"set encoding=iso-8859-1
+
+" mapped F9 auf ctrl-]
+map <F9> <C-]>
+
+" Absatz formatieren
+map <F3> gqap
+
+" Zur letzten Position springen
+autocmd BufReadPost * normal '"
+
+set foldmethod=marker
+" zo Open folded
+" zc Close folded
+
+if !exists("autocommands_loaded")
+  let autocommands_loaded = 1
+
+  " fuer python:
+  source ~/vim/config3/python.vim
+
+  " fuer perl:
+  source ~/vim/config3/perl.vim
+
+  " fuer shell-skripte:
+  source ~/vim/config3/sh.vim
+
+  " fuer c und cc:
+  source ~/vim/config3/cc.vim
+
+  " fuer cobol:
+  source ~/vim/config3/cobol.vim
+
+  " fuer cascading stylesheets:
+  source ~/vim/config3/css.vim
+
+  " fuer fortran:
+  source ~/vim/config3/fortran.vim
+
+  " fuer h und hh:
+  source ~/vim/config3/h.vim
+
+  " fuer html:
+  source ~/vim/config3/html.vim
+
+  " fuer java:
+  source ~/vim/config3/java.vim
+
+  " fuer javascript:
+  source ~/vim/config3/javascript.vim
+
+  " fuer jsp:
+  source ~/vim/config3/jsp.vim
+
+  " fuer lisp:
+  source ~/vim/config3/lisp.vim
+
+  " fuer tex:
+  source ~/vim/config3/tex.vim
+
+  " fuer Makefiles:
+  source ~/vim/config3/Makefile.vim
+
+  " fuer lex oder flex:
+  source ~/vim/config3/lex.vim
+
+  " fuer yacc oder bison:
+  source ~/vim/config3/yacc.vim
+endif
+
