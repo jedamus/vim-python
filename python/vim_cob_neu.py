@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Freitag, 28. Dezember 2012 16:10 (C) 2012 by Leander Jedamus
+# modifiziert Dienstag, 19. September 2017 17:55 von Leander Jedamus
 # modifiziert Mittwoch, 13. September 2017 09:45 von Leander Jedamus
 # modifiziert Samstag, 04. Juli 2015 14:00 von Leander Jedamus
 # modifiziert Samstag, 23. Februar 2013 10:35 von Leander Jedamus
@@ -21,13 +22,13 @@ import pyvim as p
 n = re.sub(r"(.*)\.cob","\g<1>",p.bn())
 n = re.sub(r"\.","_",n)
 
-p.b()[0:0] = [ "      * " + p.c(),
-	       "      * " + p.by(),
+p.b()[0:0] = [ "      * {c:s}".format(c=p.c()),
+	       "      * {by:s}".format(by=p.by()),
 	       "",
 	       "       IDENTIFICATION DIVISION.",
-	       "       PROGRAM-ID. "+ n + ".",
-               "       AUTHOR. " + p.u + ".",
-               "       DATE-WRITTEN. " + p.dt + ".",
+	       "       PROGRAM-ID. {n:s}.".format(n=n),
+               "       AUTHOR. {u:s}.".format(u=p.u),
+               "       DATE-WRITTEN. {dt:s}.".format(dt=p.dt),
 	       "       ",
 	       "       ENVIRONMENT DIVISION.",
 	       "       CONFIGURATION SECTION.",
@@ -56,7 +57,7 @@ p.b()[0:0] = [ "      * " + p.c(),
 	       "       PROCEDURE DIVISION.",
 	       "       ",
 	       "       STOP RUN.",
-	       "       END PROGRAM " + n + ".",
+	       "       END PROGRAM {n:s}.".format(n=n),
 	       "       ",
 	       "      * vim:ai sw=4 sts=4 expandtab"
              ]

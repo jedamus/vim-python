@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Mittwoch, 12. Dezember 2012 07:43 (C) 2012 by Leander Jedamus
+# modifiziert Dienstag, 19. September 2017 18:03 von Leander Jedamus
 # modifiziert Samstag, 04. Juli 2015 14:01 von Leander Jedamus
 # modified Thursday, 20. November 2014 13:22 by Leander Jedamus
 # modifiziert Dienstag, 12. März 2013 11:29 von Leander Jedamus
@@ -24,7 +25,7 @@ p.b()[0:0] = [ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 " \
                "Transitional//EN\" " \
                "\"http://www.w3.org/TR/html4/loose.dtd\">",
 	       "",
-               "<!-- " + p.cb() + " -->",
+               "<!-- {cb:s} -->".format(cb=p.cb()),
 	       "<html>",
 	       "  <head>",
 	       "    <meta http-equiv=\"content-type\" content=\"text/html; "
@@ -34,8 +35,8 @@ p.b()[0:0] = [ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 " \
                      "{u:s}\">"
 	             .format(y=p.y,u=p.u),
                "    <meta name=\"generator\" content=\"vi\">",
-               "    <meta name=\"publisher-email\" content=\""+ p.em() + "\">",
-               "    <meta name=\"home_url\" content=\""+ p.ww() + "\">",
+               "    <meta name=\"publisher-email\" content=\"{em:s}\">".format(em=p.em()),
+               "    <meta name=\"home_url\" content=\"{ww:s}\">".format(ww=p.ww()),
 	       "    <title> </title>",
 	       "  </head>",
 	       "  <body>",

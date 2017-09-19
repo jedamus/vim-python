@@ -1,10 +1,12 @@
 create database vim;
 create user 'vim'@'localhost' identified by 'ViM';
 create user 'vim'@'192.168.2.109' identified by 'ViM';
+create user 'vim'@'127.0.1.1' identified by 'ViM';
 flush privileges;
 use vim;
 grant all on vim.* to 'vim'@'localhost';
 grant all on vim.* to 'vim'@'192.168.2.109';
+grant all on vim.* to 'vim'@'127.0.1.1';
 create table variables(Id VARCHAR(255) PRIMARY KEY, email VARCHAR(255), www VARCHAR(255), package VARCHAR(255));
 insert into variables values ("ljedamus","ljedamus@web.de","http://www.ljedamus.de/", "de.ljedamus");
 insert into variables values ("leander","ljedamus@web.de","http://www.ljedamus.de/", "de.ljedamus");

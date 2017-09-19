@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Montag, 31. Dezember 2012 07:57 (C) 2012 by Leander Jedamus
+# modifiziert Dienstag, 19. September 2017 18:04 von Leander Jedamus
 # modifiziert Mittwoch, 09. August 2017 22:49 von Leander Jedamus
 # modifiziert Sonntag, 16. August 2015 19:17 von Leander Jedamus
 # modifiziert Samstag, 04. Juli 2015 14:00 von Leander Jedamus
@@ -93,7 +94,7 @@ def bn():
 def db():
     global email, www, package
     try:
-        conn = mdb.connect('192.168.2.109','vim','ViM','vim');
+        conn = mdb.connect('master','vim','ViM','vim');
         #cursor = conn.cursor()
         cursor = conn.cursor (mdb.cursors.DictCursor)
         cursor.execute("SELECT email, www, package FROM variables WHERE Id=%s",

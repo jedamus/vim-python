@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Freitag, 28. Dezember 2012 16:33 (C) 2012 by Leander Jedamus
+# modifiziert Dienstag, 19. September 2017 17:59 von Leander Jedamus
 # modifiziert Samstag, 04. Juli 2015 14:01 von Leander Jedamus
 # modifiziert Samstag, 23. Februar 2013 10:36 von Leander Jedamus
 # modifiziert Dienstag, 19. Februar 2013 10:34 von Leander Jedamus
@@ -18,10 +19,10 @@ import pyvim as p
 n = re.sub(r"(.*)\.f\d{0,2}$","\g<1>",p.bn())
 n = re.sub(r"\.","_",n)
 
-p.b()[0:0] = [ "C " + p.cb(),
+p.b()[0:0] = [ "C {cb:s}".format(cb=p.cb()),
 	       "       ",
-	       "       PROGRAM " + n,
-	       "       END PROGRAM " + n,
+	       "       PROGRAM {n:s}".format(n=n),
+	       "       END PROGRAM {n:s}".format(n=n),
 	       "       ",
 	       "C vim:ai sw=4 expandtab"
              ]

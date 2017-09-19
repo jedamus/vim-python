@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Mittwoch, 12. Dezember 2012 07:35 (C) 2012 by Leander Jedamus
+# modifiziert Dienstag, 19. September 2017 18:10 von Leander Jedamus
 # modifiziert Samstag, 04. Juli 2015 14:01 von Leander Jedamus
 # modified Thursday, 20. November 2014 13:25 by Leander Jedamus
 # modifiziert Dienstag, 12. März 2013 11:26 von Leander Jedamus
@@ -32,17 +33,17 @@ package = re.sub(r".*\.{d:s}\.(.*)$".format(d=d),"{d:s}.\g<1>".format(d=d),
                  packpath)
 
 p.b()[0:0] = [ "",
-               "// " + p.cb(),
+               "// {cb:s}".format(cb=p.cb()),
 	       "",
-	       "package " + package + ";",
+	       "package {package:s};".format(package=package),
 	       "",
 	       "/**",
-	       "  @author " + p.u,
+	       "  @author {u:s}".format(u=p.u),
 	       "*/",
-	       "public class " + n,
+	       "public class {n:s}".format(n=n),
 	       "{",
 	       "  ",
-	       "}; // class " + n,
+	       "}; " + "// class {n:s}".format(n=n),
 	       "",
 	       "// vim:ai sw=2"
              ]

@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Montag, 10. Dezember 2012 16:59 (C) 2012 by Leander Jedamus
+# modifiziert Dienstag, 19. September 2017 18:00 von Leander Jedamus
 # modifiziert Samstag, 04. Juli 2015 14:01 von Leander Jedamus
 # modifiziert Samstag, 23. Februar 2013 10:31 von Leander Jedamus
 # modified Montag, 04. Februar 2013 16:53 by Leander Jedamus
@@ -23,7 +24,7 @@ n2 = re.sub(r"\.","_",n).upper()
 
 p.b()[0:0] = [ "// This may look like C code, but it is really -*- C++ -*-",
 	       "// {n:s}".format(n=n),
-               "// " + p.cb(),
+               "// {cb:s}".format(cb=p.cb()),
 	       "",
 	       "#ifndef {n:s}".format(n=n2),
 	       "#define {n:s} 1".format(n=n2),
