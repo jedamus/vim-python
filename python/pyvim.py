@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Montag, 31. Dezember 2012 07:57 (C) 2012 by Leander Jedamus
+# modifiziert Samstag, 23. September 2017 13:07 von Leander Jedamus
 # modifiziert Dienstag, 19. September 2017 18:04 von Leander Jedamus
 # modifiziert Mittwoch, 09. August 2017 22:49 von Leander Jedamus
 # modifiziert Sonntag, 16. August 2015 19:17 von Leander Jedamus
@@ -61,6 +62,12 @@ package = "de.ljedamus"
 www = ""
 email = ""
 package = ""
+
+def escape(str):
+  return re.sub(r"\"","\\\"",str)
+
+def sr(reg,str):
+  vim.command("let @{r:s}=\"{s:s}\"".format(r=reg,s=escape(str)))
 
 def M(linenr,prefix="",suffix=""):
   b = vim.current.buffer
