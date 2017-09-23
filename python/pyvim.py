@@ -2,7 +2,7 @@
 # encoding=utf-8
 
 # created Montag, 31. Dezember 2012 07:57 (C) 2012 by Leander Jedamus
-# modifiziert Samstag, 23. September 2017 13:07 von Leander Jedamus
+# modifiziert Samstag, 23. September 2017 16:33 von Leander Jedamus
 # modifiziert Dienstag, 19. September 2017 18:04 von Leander Jedamus
 # modifiziert Mittwoch, 09. August 2017 22:49 von Leander Jedamus
 # modifiziert Sonntag, 16. August 2015 19:17 von Leander Jedamus
@@ -130,6 +130,34 @@ def pa():
     if package == "":
       db()
     return package
+
+def drs():
+  vim.command("let @{r:s}=\"\"".format(r="a"))
+  vim.command("let @{r:s}=\"\"".format(r="b"))
+  vim.command("let @{r:s}=\"\"".format(r="c"))
+  vim.command("let @{r:s}=\"\"".format(r="d"))
+  vim.command("let @{r:s}=\"\"".format(r="e"))
+  vim.command("let @{r:s}=\"\"".format(r="f"))
+  vim.command("let @{r:s}=\"\"".format(r="g"))
+  vim.command("let @{r:s}=\"\"".format(r="h"))
+  vim.command("let @{r:s}=\"\"".format(r="i"))
+  vim.command("let @{r:s}=\"\"".format(r="j"))
+  vim.command("let @{r:s}=\"\"".format(r="k"))
+  vim.command("let @{r:s}=\"\"".format(r="l"))
+  vim.command("let @{r:s}=\"\"".format(r="m"))
+  vim.command("let @{r:s}=\"\"".format(r="n"))
+  vim.command("let @{r:s}=\"\"".format(r="o"))
+  vim.command("let @{r:s}=\"\"".format(r="p"))
+  vim.command("let @{r:s}=\"\"".format(r="q"))
+  vim.command("let @{r:s}=\"\"".format(r="r"))
+  vim.command("let @{r:s}=\"\"".format(r="s"))
+  vim.command("let @{r:s}=\"\"".format(r="t"))
+  vim.command("let @{r:s}=\"\"".format(r="u"))
+  vim.command("let @{r:s}=\"\"".format(r="v"))
+  vim.command("let @{r:s}=\"\"".format(r="w"))
+  vim.command("let @{r:s}=\"\"".format(r="x"))
+  vim.command("let @{r:s}=\"\"".format(r="y"))
+  vim.command("let @{r:s}=\"\"".format(r="z"))
 
 # vim:ai sw=2 sts=4 expandtab
 
