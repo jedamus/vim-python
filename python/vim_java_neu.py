@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Mittwoch, 12. Dezember 2012 07:35 (C) 2012 by Leander Jedamus
+# modifiziert Samstag, 23. September 2017 14:04 von Leander Jedamus
 # modifiziert Dienstag, 19. September 2017 22:55 von Leander Jedamus
 # modifiziert Samstag, 04. Juli 2015 14:01 von Leander Jedamus
 # modified Thursday, 20. November 2014 13:25 by Leander Jedamus
@@ -43,7 +44,7 @@ p.b()[0:0] = [ "",
 	       "public class {n:s}".format(n=n),
 	       "{",
 	       "  ",
-	       "};" + "// class {n:s}".format(n=n),
+	       "}}; // class {n:s}".format(n=n),
 	       "",
 	       "// vim:ai sw=2"
              ]
