@@ -2,15 +2,15 @@
 # coding=utf-8
 
 # erzeugt Dienstag, 10. Oktober 2017 12:07 (C) 2017 von Leander Jedamus
-# modifiziert Dienstag, 10. Oktober 2017 12:37 von Leander Jedamus
+# modifiziert Dienstag, 10. Oktober 2017 13:14 von Leander Jedamus
 
 import pyvim as p
 
 p.drs()
 p.sr("a","iich bin in pascal.\n")
 
-# fUnction
-p.sr("u",":se ai\nA\nFUNCTION ;\n\nBEGIN\nEND;kA\n  ^4k2w")
+# fuNction
+p.sr("n",":se ai\nA\nFUNCTION ;\n\nBEGIN\nEND;kA\n  ^4k2w")
 # Procedure
 p.sr("p",":se ai\nA\nPROCEDURE ;\n\nBEGIN\nEND;kA\n  ^4k2w")
 # Case
@@ -25,6 +25,9 @@ p.sr("f",":se ai\nA\nFOR TO DO\nBEGIN\nEND;kA\n  ^2kw")
 p.sr("o",":se ai\nA\nFOR IN DO\nBEGIN\nEND;kA\n  ^2kw")
 # While
 p.sr("w",":se ai\nA\nWHILE DO\nBEGIN\nEND;kA\n  ^2kw")
+
+# Unit
+p.sr("u",":1\n^cwUNIT4j^cwINTERFACE\n\nIMPLEMENTATION\n^2k")
 
 # vim:ai sw=2 sts=4 expandtab
 
