@@ -37,6 +37,9 @@ if !exists("autocommands_loaded")
   " fuer perl:
   source ~/vim/config/perl.vim
 
+  " fuer pascal:
+  source ~/vim/config/pascal.vim
+
   " fuer shell-skripte:
   source ~/vim/config/sh.vim
 
