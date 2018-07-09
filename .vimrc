@@ -43,7 +43,10 @@ if !exists("autocommands_loaded")
   " fuer shell-skripte:
   source ~/vim/config/sh.vim
 
-  " fuer c und cc:
+  " fuer c:
+  source ~/vim/config/c.vim
+
+  " fuer cc:
   source ~/vim/config/cc.vim
 
   " fuer cobol:
@@ -55,8 +58,11 @@ if !exists("autocommands_loaded")
   " fuer fortran:
   source ~/vim/config/fortran.vim
 
-  " fuer h und hh:
+  " fuer h:
   source ~/vim/config/h.vim
+
+  " fuer hh:
+  source ~/vim/config/hh.vim
 
   " fuer html:
   source ~/vim/config/html.vim

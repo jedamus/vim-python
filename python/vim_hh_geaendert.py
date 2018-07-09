@@ -14,7 +14,7 @@
 
 import pyvim as p
 
-p.M(3,"/* "," */")
+p.M(3,"// ")
 
 # vim:ai sw=2 sts=4 expandtab
 
