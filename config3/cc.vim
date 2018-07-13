@@ -10,3 +10,6 @@ autocmd BufEnter *.c++ py3file ~/vim/python/vim_c_enter.py
 autocmd BufNewFile *.cxx py3file ~/vim/python/vim_cc_neu.py
 autocmd BufWritePre *.cxx py3file ~/vim/python/vim_cc_geaendert.py
 autocmd BufEnter *.cxx py3file ~/vim/python/vim_c_enter.py
+autocmd BufNewFile *.C py3file ~/vim/python/vim_cc_neu.py
+autocmd BufWritePre *.C py3file ~/vim/python/vim_cc_geaendert.py
+autocmd BufEnter *.C py3file ~/vim/python/vim_c_enter.py

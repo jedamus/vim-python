@@ -6,3 +6,5 @@ autocmd BufNewFile *.h++ pyfile ~/vim/python/vim_hh_neu.py
 autocmd BufWritePre *.h++ pyfile ~/vim/python/vim_hh_geaendert.py
 autocmd BufNewFile *.hxx pyfile ~/vim/python/vim_hh_neu.py
 autocmd BufWritePre *.hxx pyfile ~/vim/python/vim_hh_geaendert.py
+autocmd BufNewFile *.H pyfile ~/vim/python/vim_hh_neu.py
+autocmd BufWritePre *.H pyfile ~/vim/python/vim_hh_geaendert.py
