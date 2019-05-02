@@ -2,7 +2,7 @@
 # coding=utf-8 -*- python -*-
 
 # erzeugt Donnerstag, 02. Mai 2019 03:48 (C) 2019 von Leander Jedamus
-# modifiziert Donnerstag, 02. Mai 2019 04:40 von Leander Jedamus
+# modifiziert Donnerstag, 02. Mai 2019 04:55 von Leander Jedamus
 
 import re
 import vim
@@ -18,6 +18,7 @@ p.b()[0:0] = [ "# -*- perl -*-",
 	       "use strict;",
 	       "use warnings;",
                "use Exporter;",
+               "",
                "our @ISA = qw(Exporter);",
                "our @EXPORT_OK = qw();",
 	       "",
