@@ -2,7 +2,7 @@
 # encoding=utf-8
 
 # created Dienstag, 04. Dezember 2012 17:21 (C) 2012 by Leander Jedamus
-# modifiziert Donnerstag, 02. Mai 2019 15:46 von Leander Jedamus
+# modifiziert Donnerstag, 02. Mai 2019 16:24 von Leander Jedamus
 # modifiziert Montag, 16. Juli 2018 16:00 von Leander Jedamus
 # modifiziert Dienstag, 19. September 2017 18:26 von Leander Jedamus
 # modifiziert Samstag, 04. Juli 2015 14:02 von Leander Jedamus
@@ -25,10 +25,7 @@ p.b()[0:0] = [ "#!/usr/bin/env python",
                "# {cb:s}".format(cb=p.cb()),
                "",
                "from __future__ import print_function",
-               "",
-               "# vim:ai sw=2 sts=4 expandtab"
              ]
-vim.command("normal 2k")
 
 # vim:ai sw=2 sts=4 expandtab
 

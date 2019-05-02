@@ -2,7 +2,7 @@
 # coding=utf-8 -*- python -*-
 
 # erzeugt Donnerstag, 02. Mai 2019 15:48 (C) 2019 von Leander Jedamus
-# modifiziert Donnerstag, 02. Mai 2019 16:16 von Leander Jedamus
+# modifiziert Donnerstag, 02. Mai 2019 16:27 von Leander Jedamus
 
 from __future__ import print_function
 import re
@@ -15,7 +15,9 @@ un = ln[0].upper() + ln[1:]
 t = "Test_{un:s}".format(un=un)
 tm = "test{ln:s}".format(ln=ln)
 
-p.b()[0:0] = [ "import unittest",
+p.b()[0:0] = [
+               "import sys",
+               "import unittest",
                "import {ln:s}".format(ln=ln),
                "",
                "class {t:s}(unittest.TestCase):".format(t=t),
@@ -40,10 +42,7 @@ p.b()[0:0] = [ "import unittest",
                "  suite.addTests((test1, test2))",
                "  testrunner = unittest.TextTestRunner(verbosity=2, stream=sys.stderr)",
                "  testrunner.run(suite)",
-               "",
-               "# vim:ai sw=2 sts=4 expandtab"
              ]
-vim.command("normal 2k")
 
 # vim:ai sw=2 sts=4 expandtab
 
