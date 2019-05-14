@@ -2,9 +2,14 @@
 # coding=utf-8 -*- python -*-
 
 # erzeugt Donnerstag, 02. Mai 2019 16:22 (C) 2019 von Leander Jedamus
+# modifiziert Dienstag, 14. Mai 2019 08:44 von Leander Jedamus
 # modifiziert Donnerstag, 02. Mai 2019 16:24 von Leander Jedamus
 
 from __future__ import print_function
+import os
+import sys
+sys.path.append(os.environ['HOME']+'/vim/python')
+
 import vim
 import pyvim as p
 

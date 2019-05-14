@@ -2,7 +2,12 @@
 # coding=utf-8 -*- python -*-
 
 # erzeugt Donnerstag, 02. Mai 2019 03:48 (C) 2019 von Leander Jedamus
+# modifiziert Dienstag, 14. Mai 2019 08:40 von Leander Jedamus
 # modifiziert Donnerstag, 02. Mai 2019 04:55 von Leander Jedamus
+
+import os
+import sys
+sys.path.append(os.environ['HOME']+'/vim/python')
 
 import re
 import vim

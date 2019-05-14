@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Montag, 31. Dezember 2012 07:57 (C) 2012 by Leander Jedamus
+# modifiziert Dienstag, 14. Mai 2019 08:17 von Leander Jedamus
 # modifiziert Donnerstag, 02. Mai 2019 16:28 von Leander Jedamus
 # modifiziert Samstag, 23. September 2017 16:33 von Leander Jedamus
 # modifiziert Dienstag, 19. September 2017 18:04 von Leander Jedamus
@@ -28,7 +29,7 @@ import sys
 import inspect
 import pwd
 import gettext
-import MySQLdb as mdb
+#import MySQLdb as mdb
 
 import vim
 
@@ -60,9 +61,9 @@ www = "www.ljedamus.de"
 email = "ljedamus@testemail.com"
 package = "de.ljedamus"
 
-www = ""
-email = ""
-package = ""
+#www = ""
+#email = ""
+#package = ""
 
 def escape(str):
   return re.sub(r"\"","\\\"",str)

@@ -2,8 +2,13 @@
 # coding=utf-8
 
 # erzeugt Samstag, 07. Oktober 2017 13:57 (C) 2017 von Leander Jedamus
+# modifiziert Dienstag, 14. Mai 2019 08:43 von Leander Jedamus
 # modifiziert Donnerstag, 19. Oktober 2017 14:55 von Leander Jedamus
 # modifiziert Samstag, 07. Oktober 2017 17:48 von Leander Jedamus
+
+import os
+import sys
+sys.path.append(os.environ['HOME']+'/vim/python')
 
 import pyvim as p
 

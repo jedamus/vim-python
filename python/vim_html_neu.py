@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Mittwoch, 12. Dezember 2012 07:43 (C) 2012 by Leander Jedamus
+# modifiziert Dienstag, 14. Mai 2019 08:43 von Leander Jedamus
 # modifiziert Dienstag, 19. September 2017 18:03 von Leander Jedamus
 # modifiziert Samstag, 04. Juli 2015 14:01 von Leander Jedamus
 # modified Thursday, 20. November 2014 13:22 by Leander Jedamus
@@ -16,6 +17,10 @@
 # modified Mittwoch, 12. Dezember 2012 08:17 by Leander Jedamus
 # modified Mittwoch, 12. Dezember 2012 08:12 by Leander Jedamus
 # modified Mittwoch, 12. Dezember 2012 08:09 by Leander Jedamus
+
+import os
+import sys
+sys.path.append(os.environ['HOME']+'/vim/python')
 
 import vim
 #import pyvimldap as p
