@@ -2,7 +2,7 @@
 # encoding=utf-8
 
 # created Montag, 31. Dezember 2012 07:57 (C) 2012 by Leander Jedamus
-# modifiziert Dienstag, 14. Mai 2019 08:17 von Leander Jedamus
+# modifiziert Dienstag, 14. Mai 2019 10:30 von Leander Jedamus
 # modifiziert Donnerstag, 02. Mai 2019 16:28 von Leander Jedamus
 # modifiziert Samstag, 23. September 2017 16:33 von Leander Jedamus
 # modifiziert Dienstag, 19. September 2017 18:04 von Leander Jedamus
@@ -57,9 +57,9 @@ u = (pwd.getpwnam(i)[4].split(","))[0]
 dt = time.strftime("%A, %d. %B %Y %H:%M")
 y  = time.strftime("%Y")
 
-www = "www.ljedamus.de"
-email = "ljedamus@testemail.com"
-package = "de.ljedamus"
+www = "www.jedamus-solutions.de"
+email = "ljedamus@web.de"
+package = "de.jedamus-solutions"
 
 #www = ""
 #email = ""
