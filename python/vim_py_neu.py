@@ -2,7 +2,7 @@
 # encoding=utf-8
 
 # created Dienstag, 04. Dezember 2012 17:21 (C) 2012 by Leander Jedamus
-# modifiziert Montag, 20. Mai 2019 17:02 von Leander Jedamus
+# modifiziert Montag, 20. Mai 2019 17:23 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 08:41 von Leander Jedamus
 # modifiziert Donnerstag, 02. Mai 2019 16:24 von Leander Jedamus
 # modifiziert Montag, 16. Juli 2018 16:00 von Leander Jedamus
@@ -72,7 +72,7 @@ if (re.match(r"test_.*\.py",p.bn())):
                  "  testrunner.run(suite)",
                ]
   line=32
-  command="25k"
+  command="33k8j"
 
 p.b()[line:0] = [ "",
                "# vim:ai sw=2 sts=4 expandtab"
