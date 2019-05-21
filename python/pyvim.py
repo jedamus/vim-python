@@ -2,7 +2,7 @@
 # encoding=utf-8
 
 # created Montag, 31. Dezember 2012 07:57 (C) 2012-2019 by Leander Jedamus
-# modifiziert Dienstag, 21. Mai 2019 15:06 von Leander Jedamus
+# modifiziert Dienstag, 21. Mai 2019 15:26 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 10:30 von Leander Jedamus
 # modifiziert Donnerstag, 02. Mai 2019 16:28 von Leander Jedamus
 # modifiziert Samstag, 23. September 2017 16:33 von Leander Jedamus
@@ -76,20 +76,24 @@ b = vim.current.buffer
 #n = b.name
 #i = os.getlogin()
 
-""" Die UID des Benutzers: """
+""" Die ID des Benutzers ("leander"): """
 i = pwd.getpwuid(os.geteuid())[0]
 
-""" Der Username aus dem GECOS-Feld (siehe man 3 getpwnam): """
+""" Der Username aus dem GECOS-Feld (siehe man 3 getpwnam) ("Leander Jedamus"):
+"""
 u = (pwd.getpwnam(i)[4].split(","))[0]
 
-""" Der DateString: Dienstag, 21. Mai 2019 12:48 """
+""" Der DateString: "Dienstag, 21. Mai 2019 12:48" """
 dt = time.strftime("%A, %d. %B %Y %H:%M")
 
-""" Das Jahr: 2019 """
+""" Das Jahr: "2019" """
 y  = time.strftime("%Y")
 
 def escape(str):
   """
+
+    escape:
+
     :param str str
       Der String, der escaped werden soll.
 
@@ -100,6 +104,7 @@ def escape(str):
 
 def sr(reg,str):
   """
+
     SetRegister:
 
     :param str reg:
@@ -118,6 +123,7 @@ def sr(reg,str):
 
 def M(linenr,prefix="",suffix=""):
   """
+
     Modified:
 
     :param int linenr
@@ -146,7 +152,9 @@ def M(linenr,prefix="",suffix=""):
 
 def m():
     """
+
       modified:
+
       Diese Funktion gibt als String die Zeile zurück, in der das
       Modifikationsdatum und die Modifikationszeit als auch der User
       stehen.
@@ -159,14 +167,18 @@ def m():
 
 def b():
     """
+
       buffer:
+
       Gibt den aktuellen Buffer des vi zurück.
     """
     return vim.current.buffer
 
 def cb():
     """
+
       created_by:
+
       Diese Funktion gibt als String die Zeile zurück, in der das
       Erzeugungsdatum und die Erzeugungszeit, das Copyright-Zeichen, das
       Jahr, in dem die Datei erzeugt wurde und der User, der die Datei
@@ -178,7 +190,9 @@ def cb():
 
 def c():
     """
+
       created:
+
       Diese Funktion gibt als String die Zeile zurück, in der das
       Erzeugungsdatum und die Erzeugungszeit steht.
       Um die jeweilige Sprache zu unterstützen, wird als Funktion
@@ -188,7 +202,9 @@ def c():
 
 def by():
     """
+
       by:
+
       Diese Funktion gibt als String die Zeile zurück, in der das
       Copyright-Zeichen, das Jahr, in dem die Datei erzeugt wurde
       und der User, der die Datei als Erster geschrieben hat, steht.
@@ -200,21 +216,27 @@ def by():
 
 def n():
     """
+
       name:
+
       Diese Funktion gibt den Namen der Datei zurück (mit Pfad).
     """
     return vim.current.buffer.name
 
 def bn():
     """
+
       basename:
+
       Diese Funktion gibt nur den Namen der Datei zurück (also ohne Pfad).
     """
     return os.path.basename(n())
 
 def db():
     """
+
       DataBase:
+
       Diese Funktion nimmt Kontakt mit der Datenbank auf.
       Es werden die Attribute email, www und package eingelesen und gesetzt.
     """
@@ -237,7 +259,9 @@ def db():
 
 def em():
     """
+
       email:
+
       Hier wird die Email-Adresse des Benutzers zurückgegeben. Ist email
       anfangs leer, wird die Datenbank befragt und dort email gesetzt.
       Es sollte sowas wie "ljedamus@web.de" zurückgegeben werden.
@@ -249,7 +273,9 @@ def em():
 
 def ww():
     """
+
       www:
+
       Hier wird die Web-Adresse des Benutzers zurückgegeben. Ist www
       anfangs leer, wird die Datenbank befragt und dort www gesetzt.
       Es sollte sowas wie "http://www.ljedamus.de/" zurückgegeben werden.
@@ -261,7 +287,9 @@ def ww():
 
 def pa():
     """
+
       package:
+
       Hier wird das Package des Benutzers zurückgegeben. Ist package
       anfangs leer, wird die Datenbank befragt und dort package gesetzt.
       Es sollte sowas wie "de.ljedamus" zurückgegeben werden.
@@ -277,7 +305,9 @@ def pa():
 
 def drs():
   """
+
     DeleteRegisters:
+
     Hier werden alle Register von a bis z zurückgesetzt.
   """
   vim.command("let @{r:s}=\"\"".format(r="a"))
