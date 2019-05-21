@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # encoding=utf-8
 
-# created Montag, 31. Dezember 2012 07:57 (C) 2012 by Leander Jedamus
+# created Montag, 31. Dezember 2012 07:57 (C) 2012-2019 by Leander Jedamus
+# modifiziert Dienstag, 21. Mai 2019 13:42 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 10:30 von Leander Jedamus
 # modifiziert Donnerstag, 02. Mai 2019 16:28 von Leander Jedamus
 # modifiziert Samstag, 23. September 2017 16:33 von Leander Jedamus
@@ -22,6 +23,11 @@
 # modified Montag, 31. Dezember 2012 16:22 by Leander Jedamus
 # modified Montag, 31. Dezember 2012 08:20 by Leander Jedamus
 
+"""
+  Das ist das Modul, daß die Hilfsfunktionen für die Arbeit
+  in vim bereitstellt.
+"""
+
 import time
 import re
 import os
@@ -29,14 +35,25 @@ import sys
 import inspect
 import pwd
 import gettext
-#import MySQLdb as mdb
 
+try:
+  import MySQLdb as mdb
+  www = ""
+  email = ""
+  package = ""
+except ImportError:
+  www = "www.jedamus-solutions.de"
+  email = "ljedamus@web.de"
+  package = "de.jedamus-solutions"
+
+""" Das hier funktioniert nur in vim: """
 import vim
 
+""" Hier wird die englische oder deutsche Sprachunterstützung geladen: """
 scriptname = "pyvim.py"
 scriptpath = os.path.realpath(os.path.abspath(os.path.split( \
                inspect.getfile(inspect.currentframe()))[0]))
-#scriptpath = os.path.join(os.environ['HOME'],".vim","python")
+#scriptpath = os.path.join(os.environ['HOME'],"vim","python")
 #for path in sys.path:
     #if(os.access(os.path.join(path,scriptname), os.F_OK)):
         #scriptpath = path
@@ -45,33 +62,56 @@ try:
     #trans.install(unicode=False)
     trans.install()
 except IOError:
+    """ Fallback, falls die Sprache nicht geladen werden konnte: """
     def _ (s):
         return s
 
+""" Der Buffer: """
 b = vim.current.buffer
 #n = b.name
 #i = os.getlogin()
+
+""" Die UID des Benutzers: """
 i = pwd.getpwuid(os.geteuid())[0]
+
+""" Der Username aus dem GECOS-Feld: """
 u = (pwd.getpwnam(i)[4].split(","))[0]
 
+""" Der DateString: Dienstag, 21. Mai 2019 12:48 """
 dt = time.strftime("%A, %d. %B %Y %H:%M")
+
+""" Das Jahr: 2019 """
 y  = time.strftime("%Y")
 
-www = "www.jedamus-solutions.de"
-email = "ljedamus@web.de"
-package = "de.jedamus-solutions"
-
-#www = ""
-#email = ""
-#package = ""
-
 def escape(str):
+  """
+    Hier wird der String str mit Escape-Zeichen versehen, falls in str
+    ein \e drin steht.
+  """
   return re.sub(r"\"","\\\"",str)
 
 def sr(reg,str):
+  """
+    SetRegister:
+    Diese Funktion setzt das vi-Register reg auf den String str. Der String
+    str wird dazu escaped (siehe Funktion escape(str)).
+    Wenn das Register reg="a" ist, dann kann man das Register mit @a
+    abrufen.
+  """
   vim.command("let @{r:s}=\"{s:s}\"".format(r=reg,s=escape(str)))
 
 def M(linenr,prefix="",suffix=""):
+  """
+    Modified:
+    Hier wird geschaut, ob schon eine Zeile für das heutige Datum und den
+    jetzigen User existiert. Wenn ja, wird nur die Zeit aktualisiert,
+    ansonsten eine neue Zeile gesetzt.
+    Parameter sind:
+    linenr: Gibt die Zeile an, in der der Kommentar mit der Modifikations-
+    Zeit stehen soll.
+    prefix: Gibt den String für ein Kommentar-Anfang an.
+    suffix: Gibt den String für das Kommentar-Ende an.
+  """
   b = vim.current.buffer
   tdt = time.strftime("%A, %d. %B %Y")
   ti  = time.strftime("%H:%M")
@@ -85,25 +125,82 @@ def M(linenr,prefix="",suffix=""):
     b[linenr:0] = [ prefix + m() + suffix ]
 
 def m():
+    """
+      modified:
+      Diese Funktion gibt als String die Zeile zurück, in der das
+      Modifikationsdatum und die Modifikationszeit als auch der User
+      stehen.
+      Um die jeweilige Sprache zu unterstützen, wird als Funktion
+      _ (gettext) aufgerufen.
+    """
     dt = time.strftime("%A, %d. %B %Y %H:%M")
     y  = time.strftime("%Y")
     return _("modified {dt:s} by {u:s}").format(dt=dt, u=u)
+
 def b():
+    """
+      buffer:
+      Gibt den aktuellen Buffer des vi zurück.
+    """
     return vim.current.buffer
+
 def cb():
+    """
+      created_by:
+      Diese Funktion gibt als String die Zeile zurück, in der das
+      Erzeugungsdatum und die Erzeugungszeit, das Copyright-Zeichen, das
+      Jahr, in dem die Datei erzeugt wurde und der User, der die Datei
+      als Erster geschrieben hat, steht.
+      Um die jeweilige Sprache zu unterstützen, wird als Funktion
+      _ (gettext) aufgerufen.
+    """
     return _("created {dt:s} (C) {y:s} by {u:s}").format(dt=dt, y=y, u=u)
+
 def c():
+    """
+      created:
+      Diese Funktion gibt als String die Zeile zurück, in der das
+      Erzeugungsdatum und die Erzeugungszeit steht.
+      Um die jeweilige Sprache zu unterstützen, wird als Funktion
+      _ (gettext) aufgerufen.
+    """
     return _("created {dt:s}").format(dt=dt)
+
 def by():
+    """
+      by:
+      Diese Funktion gibt als String die Zeile zurück, in der das
+      Copyright-Zeichen, das Jahr, in dem die Datei erzeugt wurde
+      und der User, der die Datei als Erster geschrieben hat, steht.
+      Um die jeweilige Sprache zu unterstützen, wird als Funktion
+      _ (gettext) aufgerufen.
+
+    """
     return _("(C) {y:s} by {u:s}").format(y=y, u=u)
+
 def n():
+    """
+      name:
+      Diese Funktion gibt den Namen der Datei zurück (mit Pfad).
+    """
     return vim.current.buffer.name
+
 def bn():
+    """
+      basename:
+      Diese Funktion git nur den Namen der Datei zurück (also ohne Pfad).
+    """
     return os.path.basename(n())
+
 def db():
+    """
+      DataBase:
+      Diese Funktion nimmt Kontakt mit der Datenbank auf.
+      Es werden die Attribute email, www und package eingelesen und gesetzt.
+    """
     global email, www, package
     try:
-        conn = mdb.connect('master','vim','ViM','vim');
+        conn = mdb.connect(host='master',user='vim',passwd='ViM',db='vim');
         #cursor = conn.cursor()
         cursor = conn.cursor (mdb.cursors.DictCursor)
         cursor.execute("SELECT email, www, package FROM variables WHERE Id=%s",
@@ -119,21 +216,50 @@ def db():
                                                   error=e.args[1]))
 
 def em():
+    """
+      email:
+      Hier wird die Email-Adresse des Benutzers zurückgegeben. Ist email
+      anfangs leer, wird die Datenbank befragt und dort email gesetzt.
+      Es sollte sowas wie "ljedamus@web.de" zurückgegeben werden.
+      Das wird in HTML-Dateien benötigt (siehe "vim_html_neu.py").
+    """
     if email == "":
       db()
     return email
 
 def ww():
+    """
+      www:
+      Hier wird die Web-Adresse des Benutzers zurückgegeben. Ist www
+      anfangs leer, wird die Datenbank befragt und dort www gesetzt.
+      Es sollte sowas wie "http://www.ljedamus.de/" zurückgegeben werden.
+      Das wird in HTML-Dateien benötigt (siehe "vim_html_neu.py").
+    """
     if www == "":
       db()
     return www
 
 def pa():
+    """
+      package:
+      Hier wird das Package des Benutzers zurückgegeben. Ist package
+      anfangs leer, wird die Datenbank befragt und dort package gesetzt.
+      Es sollte sowas wie "de.ljedamus" zurückgegeben werden.
+      Das wird in Java-Dateien benötigt (siehe "vim_java_neu.py"):
+      Heißt die Java-Datei beispielsweise
+      /home/leander/tmp/de/ljedamus/mypack/pack1/mypack.java
+      so wird folgendes gesetzt:
+      package de.ljedamus.mypack.pack1;
+    """
     if package == "":
       db()
     return package
 
 def drs():
+  """
+    DeleteRegisters:
+    Hier werden alle Register von a bis z zurückgesetzt.
+  """
   vim.command("let @{r:s}=\"\"".format(r="a"))
   vim.command("let @{r:s}=\"\"".format(r="b"))
   vim.command("let @{r:s}=\"\"".format(r="c"))
