@@ -2,7 +2,7 @@
 # encoding=utf-8
 
 # created Montag, 31. Dezember 2012 07:57 (C) 2012-2019 by Leander Jedamus
-# modifiziert Dienstag, 21. Mai 2019 15:26 von Leander Jedamus
+# modifiziert Dienstag, 21. Mai 2019 16:45 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 10:30 von Leander Jedamus
 # modifiziert Donnerstag, 02. Mai 2019 16:28 von Leander Jedamus
 # modifiziert Samstag, 23. September 2017 16:33 von Leander Jedamus
@@ -97,8 +97,8 @@ def escape(str):
     :param str str
       Der String, der escaped werden soll.
 
-    Hier wird der String str mit Escape-Zeichen versehen, falls in str
-    ein \e drin steht.
+    Hier wird der String str mit Escape-Zeichen versehen, falls in
+    str ein \e drin steht.
   """
   return re.sub(r"\"","\\\"",str)
 
@@ -112,12 +112,13 @@ def sr(reg,str):
 
     :param str str:
       Der String, der mit dem Register aufgerufen werden soll.
-      Beispiele sind in den vim_(sprachkürzel)_enter.py-Dateien zu finden.
+      Beispiele sind in den vim_(sprachkürzel)_enter.py-Dateien
+      zu finden.
 
-    Diese Funktion setzt das vi-Register reg auf den String str. Der String
-    str wird dazu escaped (siehe Funktion escape(str)).
-    Wenn das Register reg="a" ist, dann kann man das Register mit @a
-    abrufen.
+    Diese Funktion setzt das vi-Register reg auf den String str.
+    Der String str wird dazu escaped (siehe Funktion escape(str)).
+    Wenn das Register reg="a" ist, dann kann man das Register mit
+    @a abrufen.
   """
   vim.command("let @{r:s}=\"{s:s}\"".format(r=reg,s=escape(str)))
 
@@ -127,16 +128,16 @@ def M(linenr,prefix="",suffix=""):
     Modified:
 
     :param int linenr
-      Gibt die Zeile an, in der der Kommentar mit der Modifikationszeit
-      stehen soll.
+      Gibt die Zeile an, in der der Kommentar mit der
+      Modifikationszeit stehen soll.
     :param str prefix
       Gibt den String für ein Kommentar-Anfang an.
     :param str suffix
       Gibt den String für das Kommentar-Ende an.
 
-    Hier wird geschaut, ob schon eine Zeile für das heutige Datum und den
-    jetzigen User existiert. Wenn ja, wird nur die Zeit aktualisiert,
-    ansonsten eine neue Zeile gesetzt.
+    Hier wird geschaut, ob schon eine Zeile für das heutige Datum
+    und den jetzigen User existiert. Wenn ja, wird nur die Zeit
+    aktualisiert, ansonsten eine neue Zeile gesetzt.
   """
   b = vim.current.buffer
   tdt = time.strftime("%A, %d. %B %Y")
@@ -180,9 +181,9 @@ def cb():
       created_by:
 
       Diese Funktion gibt als String die Zeile zurück, in der das
-      Erzeugungsdatum und die Erzeugungszeit, das Copyright-Zeichen, das
-      Jahr, in dem die Datei erzeugt wurde und der User, der die Datei
-      als Erster geschrieben hat, steht.
+      Erzeugungsdatum und die Erzeugungszeit, das Copyright-Zeichen,
+      das Jahr, in dem die Datei erzeugt wurde und der User, der die
+      Datei als Erster geschrieben hat, steht.
       Um die jeweilige Sprache zu unterstützen, wird als Funktion
       _ (gettext) aufgerufen.
     """
@@ -228,7 +229,8 @@ def bn():
 
       basename:
 
-      Diese Funktion gibt nur den Namen der Datei zurück (also ohne Pfad).
+      Diese Funktion gibt nur den Namen der Datei zurück
+      (also ohne Pfad).
     """
     return os.path.basename(n())
 
@@ -238,7 +240,8 @@ def db():
       DataBase:
 
       Diese Funktion nimmt Kontakt mit der Datenbank auf.
-      Es werden die Attribute email, www und package eingelesen und gesetzt.
+      Es werden die Attribute email, www und package eingelesen 
+      und gesetzt.
     """
     global email, www, package
     try:
@@ -262,8 +265,9 @@ def em():
 
       email:
 
-      Hier wird die Email-Adresse des Benutzers zurückgegeben. Ist email
-      anfangs leer, wird die Datenbank befragt und dort email gesetzt.
+      Hier wird die Email-Adresse des Benutzers zurückgegeben.
+      Ist email anfangs leer, wird die Datenbank befragt und dort
+      email gesetzt.
       Es sollte sowas wie "ljedamus@web.de" zurückgegeben werden.
       Das wird in HTML-Dateien benötigt (siehe "vim_html_neu.py").
     """
@@ -278,7 +282,8 @@ def ww():
 
       Hier wird die Web-Adresse des Benutzers zurückgegeben. Ist www
       anfangs leer, wird die Datenbank befragt und dort www gesetzt.
-      Es sollte sowas wie "http://www.ljedamus.de/" zurückgegeben werden.
+      Es sollte sowas wie "http://www.ljedamus.de/" zurückgegeben
+      werden.
       Das wird in HTML-Dateien benötigt (siehe "vim_html_neu.py").
     """
     if www == "":
@@ -290,8 +295,9 @@ def pa():
 
       package:
 
-      Hier wird das Package des Benutzers zurückgegeben. Ist package
-      anfangs leer, wird die Datenbank befragt und dort package gesetzt.
+      Hier wird das Package des Benutzers zurückgegeben. Ist
+      package anfangs leer, wird die Datenbank befragt und dort
+      package gesetzt.
       Es sollte sowas wie "de.ljedamus" zurückgegeben werden.
       Das wird in Java-Dateien benötigt (siehe "vim_java_neu.py"):
       Heißt die Java-Datei beispielsweise
