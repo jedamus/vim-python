@@ -2,7 +2,7 @@
 # encoding=utf-8
 
 # created Montag, 31. Dezember 2012 07:57 (C) 2012-2019 by Leander Jedamus
-# modifiziert Dienstag, 21. Mai 2019 14:45 von Leander Jedamus
+# modifiziert Dienstag, 21. Mai 2019 15:06 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 10:30 von Leander Jedamus
 # modifiziert Donnerstag, 02. Mai 2019 16:28 von Leander Jedamus
 # modifiziert Samstag, 23. September 2017 16:33 von Leander Jedamus
@@ -38,10 +38,15 @@ import gettext
 
 try:
   import MySQLdb as mdb
+  """ Die Werte werden erst dann geladen, wenn sie auch benötigt werden.  """
   www = ""
   email = ""
   package = ""
 except ImportError:
+  """
+    Hier sollten Sie Ihre Default-Werte einsetzen!
+    Vor allem, wenn Sie keine Datenbank betreiben wollen.
+  """
   www = "www.jedamus-solutions.de"
   email = "ljedamus@web.de"
   package = "de.jedamus-solutions"
@@ -74,7 +79,7 @@ b = vim.current.buffer
 """ Die UID des Benutzers: """
 i = pwd.getpwuid(os.geteuid())[0]
 
-""" Der Username aus dem GECOS-Feld: """
+""" Der Username aus dem GECOS-Feld (siehe man 3 getpwnam): """
 u = (pwd.getpwnam(i)[4].split(","))[0]
 
 """ Der DateString: Dienstag, 21. Mai 2019 12:48 """
@@ -85,6 +90,9 @@ y  = time.strftime("%Y")
 
 def escape(str):
   """
+    :param str str
+      Der String, der escaped werden soll.
+
     Hier wird der String str mit Escape-Zeichen versehen, falls in str
     ein \e drin steht.
   """
@@ -93,6 +101,14 @@ def escape(str):
 def sr(reg,str):
   """
     SetRegister:
+
+    :param str reg:
+      Das Register ("a"-"z"), das gesetzt werden soll.
+
+    :param str str:
+      Der String, der mit dem Register aufgerufen werden soll.
+      Beispiele sind in den vim_(sprachkürzel)_enter.py-Dateien zu finden.
+
     Diese Funktion setzt das vi-Register reg auf den String str. Der String
     str wird dazu escaped (siehe Funktion escape(str)).
     Wenn das Register reg="a" ist, dann kann man das Register mit @a
@@ -103,14 +119,18 @@ def sr(reg,str):
 def M(linenr,prefix="",suffix=""):
   """
     Modified:
+
+    :param int linenr
+      Gibt die Zeile an, in der der Kommentar mit der Modifikationszeit
+      stehen soll.
+    :param str prefix
+      Gibt den String für ein Kommentar-Anfang an.
+    :param str suffix
+      Gibt den String für das Kommentar-Ende an.
+
     Hier wird geschaut, ob schon eine Zeile für das heutige Datum und den
     jetzigen User existiert. Wenn ja, wird nur die Zeit aktualisiert,
     ansonsten eine neue Zeile gesetzt.
-    Parameter sind:
-    linenr: Gibt die Zeile an, in der der Kommentar mit der Modifikations-
-    Zeit stehen soll.
-    prefix: Gibt den String für ein Kommentar-Anfang an.
-    suffix: Gibt den String für das Kommentar-Ende an.
   """
   b = vim.current.buffer
   tdt = time.strftime("%A, %d. %B %Y")
