@@ -2,7 +2,7 @@
 # encoding=utf-8
 
 # created Montag, 31. Dezember 2012 07:57 (C) 2012-2019 by Leander Jedamus
-# modifiziert Dienstag, 21. Mai 2019 13:42 von Leander Jedamus
+# modifiziert Dienstag, 21. Mai 2019 14:45 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 10:30 von Leander Jedamus
 # modifiziert Donnerstag, 02. Mai 2019 16:28 von Leander Jedamus
 # modifiziert Samstag, 23. September 2017 16:33 von Leander Jedamus
@@ -188,7 +188,7 @@ def n():
 def bn():
     """
       basename:
-      Diese Funktion git nur den Namen der Datei zurück (also ohne Pfad).
+      Diese Funktion gibt nur den Namen der Datei zurück (also ohne Pfad).
     """
     return os.path.basename(n())
 
