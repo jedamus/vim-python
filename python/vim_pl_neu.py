@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Mittwoch, 05. Dezember 2012 06:16 (C) 2012 by Leander Jedamus
+# modifiziert Mittwoch, 22. Mai 2019 16:42 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 08:40 von Leander Jedamus
 # modifiziert Montag, 16. Juli 2018 21:49 von Leander Jedamus
 # modifiziert Dienstag, 19. September 2017 18:26 von Leander Jedamus
@@ -14,6 +15,11 @@
 # modified Montag, 10. Dezember 2012 16:28 by Leander Jedamus
 # modified Mittwoch, 05. Dezember 2012 06:18 by Leander Jedamus
 
+"""
+  Dieses Skript wird aufgerufen, wenn eine *.pl-Datei neu
+  erzeugt werden soll.
+"""
+
 import os
 import sys
 sys.path.append(os.environ['HOME']+'/vim/python')
@@ -21,6 +27,10 @@ sys.path.append(os.environ['HOME']+'/vim/python')
 import vim
 import pyvim as p
 
+"""
+  Das ist der Header einer Perl-Datei. cb steht für created by
+  (siehe pyvim.py).
+"""
 p.b()[0:0] = [ "#!/usr/bin/perl",
                "# -*- perl -*-",
                "# {cb:s}".format(cb=p.cb()),
