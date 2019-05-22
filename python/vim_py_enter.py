@@ -2,10 +2,27 @@
 # coding=utf-8
 
 # erzeugt Samstag, 23. September 2017 12:57 (C) 2017 von Leander Jedamus
+# modifiziert Mittwoch, 22. Mai 2019 14:48 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 08:45 von Leander Jedamus
 # modifiziert Montag, 16. Juli 2018 15:45 von Leander Jedamus
 # modifiziert Donnerstag, 19. Oktober 2017 14:56 von Leander Jedamus
 # modifiziert Samstag, 23. September 2017 16:37 von Leander Jedamus
+
+"""
+  Dieses Skript wird bei jedem Bufferwechsel in eine *.py-
+  oder *.pyw-Datei aufgerufen und setzt einige Register:
+
+  @g (gettext): Setzt einige Zeilen für die Verwendung von gettext
+  (um verschiedene Sprachen zu benutzen).
+
+  @l (logging): Setzt einige Zeilen zum Loggen.
+
+  @p (print): Setzt den import der print-Funktion aus __future__.
+
+  @h (home): Setzt einige Zeilen für ~/vim/python/Dateien, die das
+  Modul pyvim.py sonst nicht finden.
+
+"""
 
 import os
 import sys

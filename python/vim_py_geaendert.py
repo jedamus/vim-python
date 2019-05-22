@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Dienstag, 04. Dezember 2012 17:22 (C) 2012 by Leander Jedamus
+# modifiziert Mittwoch, 22. Mai 2019 14:54 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 08:41 von Leander Jedamus
 # modifiziert Samstag, 04. Juli 2015 14:02 von Leander Jedamus
 # modifiziert Montag, 11. März 2013 08:41 von Leander Jedamus
@@ -16,6 +17,13 @@
 # modified Mittwoch, 12. Dezember 2012 08:13 by Leander Jedamus
 # modified Montag, 10. Dezember 2012 16:28 by Leander Jedamus
 # modified Dienstag, 04. Dezember 2012 17:24 by Leander Jedamus
+
+"""
+  Dieses Skript wird aufgerufen, wenn eine *.py- oder *.pyw-Datei
+  sich geändert hat. Es wird nur ein Kommentar verändert oder
+  neu gesetzt, wenn es zu dem aktuellen Datum keine Zeile für die
+  Modifikation gibt.
+"""
 
 import os
 import sys

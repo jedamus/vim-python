@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Dienstag, 04. Dezember 2012 17:21 (C) 2012 by Leander Jedamus
+# modifiziert Mittwoch, 22. Mai 2019 14:36 von Leander Jedamus
 # modifiziert Montag, 20. Mai 2019 17:23 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 08:41 von Leander Jedamus
 # modifiziert Donnerstag, 02. Mai 2019 16:24 von Leander Jedamus
@@ -18,6 +19,12 @@
 # modified Montag, 10. Dezember 2012 16:28 by Leander Jedamus
 # modified Dienstag, 04. Dezember 2012 17:25 by Leander Jedamus
 
+"""
+  Dieses Skript wird aufgerufen, wenn eine *.py- oder *.pyw-Datei
+  neu erzeugt werden soll.
+
+"""
+
 import os
 import sys
 import re
@@ -26,6 +33,10 @@ sys.path.append(os.environ['HOME']+'/vim/python')
 import vim
 import pyvim as p
 
+"""
+  Das ist der Header einer Python-Datei. cb steht für created by
+  (siehe pyvim.py).
+"""
 p.b()[0:0] = [ "#!/usr/bin/env python",
                "# coding=utf-8 -*- python -*-",
                "",
@@ -33,14 +44,28 @@ p.b()[0:0] = [ "#!/usr/bin/env python",
                "",
                "from __future__ import print_function",
              ]
-
 line=6
 command="2k"
+
+"""
+  Wenn der Dateiname mit test_ beginnt, so liegt eine
+  Datei für eine Testumgebung (unittest) vor.
+"""
 if (re.match(r"test_.*\.py",p.bn())):
+  """ Hier wird der Dateiname ohne Pfad extrahiert. """
   n = re.sub(r"(.*).py","\g<1>",p.bn())
+
+  """ Hier wird der zu testenden Klasse extrahiert. """
   ln = re.sub(r"test_(.*).py","\g<1>",p.bn())
+
+  """ Der erste Buchstabe soll groß sein, der Rest wird
+      übernommen. """
   un = ln[0].upper() + ln[1:]
+
+  """ Name der Klasse """
   t = "Test_{un:s}".format(un=un)
+
+  """ Name der Testmethode """
   tm = "test{ln:s}".format(ln=ln)
 
   p.b()[line:0] = [
@@ -74,6 +99,7 @@ if (re.match(r"test_.*\.py",p.bn())):
   line=32
   command="33k8j"
 
+""" Der Abschluß der Datei """
 p.b()[line:0] = [ "",
                "# vim:ai sw=2 sts=4 expandtab"
              ]
