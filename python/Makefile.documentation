@@ -58,7 +58,7 @@ endef
 define pydoc.py
 @$(RM) $@
 $(PYDOC) -w $(<:%.py=%)
-@$(RM) $(<%.py=%.pyc)
+@$(RM) $(<:%.py=%.pyc)
 endef
 
 %.1:		%.pl
