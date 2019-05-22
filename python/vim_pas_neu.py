@@ -2,8 +2,14 @@
 # encoding=utf-8
 
 # created Dienstag, 10. Oktober 2017 11:52 (C) 2017 by Leander Jedamus
+# modifiziert Mittwoch, 22. Mai 2019 18:21 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 08:40 von Leander Jedamus
 # modifiziert Dienstag, 10. Oktober 2017 12:05 von Leander Jedamus
+
+"""
+  Dieses Skript wird aufgerufen, wenn eine *.pas-Datei neu
+  erzeugt werden soll.
+"""
 
 import os
 import sys
@@ -13,6 +19,7 @@ import re
 import vim
 import pyvim as p
 
+""" Hier wird der Dateiname ohne Endung .pas extrahiert. """
 n = re.sub(r"(.*).pas","\g<1>",p.bn())
 
 p.b()[0:0] = [ "PROGRAM {n:s};".format(n=n),

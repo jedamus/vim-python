@@ -2,9 +2,33 @@
 # coding=utf-8
 
 # erzeugt Dienstag, 10. Oktober 2017 12:07 (C) 2017 von Leander Jedamus
+# modifiziert Mittwoch, 22. Mai 2019 18:19 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 08:39 von Leander Jedamus
 # modifiziert Donnerstag, 19. Oktober 2017 14:54 von Leander Jedamus
 # modifiziert Dienstag, 10. Oktober 2017 13:14 von Leander Jedamus
+
+"""
+  Dieses Skript wird bei jedem Bufferwechsel in eine *.pas-
+  Datei aufgerufen und setzt einige Register:
+
+  @u (unit): wandelt eine PROGRAM-Datei in eine UNIT um
+
+  @n (function): function-Konstrukt
+
+  @p (procedure): procedure-Kontrukt
+
+  @c (case): case-Konstrukt
+
+  @i (if): if-Konstrukt
+
+  @e (else): else-Konstrukt
+
+  @f (for): for-Konstrukt
+
+  @o (for in): for-in-Konstrukt
+
+  @w (while): while-Konstrukt
+"""
 
 import os
 import sys
@@ -13,7 +37,7 @@ sys.path.append(os.environ['HOME']+'/vim/python')
 import pyvim as p
 
 p.drs()
-p.sr("a","iich bin in pascal.\n\e")
+# p.sr("a","iich bin in pascal.\n\e")
 
 # fuNction
 p.sr("n",":se ai\nA\nFUNCTION ;\n\nBEGIN\nEND;\ekA\n  \e^4k2w")
