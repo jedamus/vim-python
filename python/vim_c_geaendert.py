@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Montag, 10. Dezember 2012 17:24 (C) 2012 by Leander Jedamus
+# modifiziert Mittwoch, 22. Mai 2019 18:52 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 08:42 von Leander Jedamus
 # modifiziert Montag, 09. Juli 2018 10:27 von Leander Jedamus
 # modifiziert Samstag, 04. Juli 2015 14:00 von Leander Jedamus
@@ -13,6 +14,13 @@
 # modified Mittwoch, 12. Dezember 2012 08:16 by Leander Jedamus
 # modified Mittwoch, 12. Dezember 2012 08:10 by Leander Jedamus
 # modified Montag, 10. Dezember 2012 17:28 by Leander Jedamus
+
+"""
+  Dieses Skript wird aufgerufen, wenn sich eine *.c-Datei
+  geändert hat. Es wird nur ein Kommentar verändert oder neu
+  gesetzt, wenn es zu dem aktuellen Datum keine Zeile für die
+  Modifikation gibt.
+"""
 
 import os
 import sys

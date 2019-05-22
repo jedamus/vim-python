@@ -2,11 +2,34 @@
 # coding=utf-8
 
 # erzeugt Samstag, 23. September 2017 12:57 (C) 2017 von Leander Jedamus
+# modifiziert Mittwoch, 22. Mai 2019 18:51 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 08:42 von Leander Jedamus
 # modifiziert Freitag, 13. Juli 2018 14:08 von Leander Jedamus
 # modifiziert Donnerstag, 12. Juli 2018 22:41 von Leander Jedamus
 # modifiziert Donnerstag, 19. Oktober 2017 14:56 von Leander Jedamus
 # modifiziert Samstag, 23. September 2017 16:37 von Leander Jedamus
+
+"""
+  Dieses Skript wird bei jedem Bufferwechsel in eine *.c-
+  Datei aufgerufen und setzt einige Register:
+
+  @i (if): if-Konstrukt
+
+  @e (else): else-Konstrukt
+
+  @l (else if): else-if-Konstrukt
+
+  @f (for): for-Konstrukt
+
+  @s (switch): switch-Konstrukt
+
+  @d (do while): do-while-Konstrukt
+
+  @w (while): while-Konstrukt
+
+  @m (main): main-Funktion
+
+"""
 
 import os
 import sys
