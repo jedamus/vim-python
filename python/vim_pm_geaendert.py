@@ -2,8 +2,16 @@
 # coding=utf-8 -*- python -*-
 
 # erzeugt Donnerstag, 02. Mai 2019 04:00 (C) 2019 von Leander Jedamus
+# modifiziert Mittwoch, 22. Mai 2019 18:06 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 08:40 von Leander Jedamus
 # modifiziert Donnerstag, 02. Mai 2019 04:01 von Leander Jedamus
+
+"""
+  Dieses Skript wird aufgerufen, wenn sich eine *.pm-Datei
+  geändert hat. Es wird nur ein Kommentar verändert oder neu
+  gesetzt, wenn es zu dem aktuellen Datum keine Zeile für die
+  Modifikation gibt.
+"""
 
 import os
 import sys
