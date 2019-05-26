@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Mittwoch, 12. Dezember 2012 07:35 (C) 2012 by Leander Jedamus
+# modifiziert Sonntag, 26. Mai 2019 11:53 von Leander Jedamus
 # modifiziert Mittwoch, 22. Mai 2019 18:32 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 08:44 von Leander Jedamus
 # modifiziert Samstag, 23. September 2017 14:04 von Leander Jedamus
@@ -30,11 +31,15 @@ import os
 import sys
 sys.path.append(os.environ['HOME']+'/vim/python')
 
+use_ldap = False
+
 import re
 import os
 import vim
-# import pyvimldap as p
-import pyvim as p
+if use_ldap:
+  import pyvimldap as p
+else:
+  import pyvim as p
 
 """ Hier kommt der package-Prefix hinein: """
 d=p.pa()
