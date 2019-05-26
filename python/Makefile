@@ -1,4 +1,5 @@
 # erzeugt Dienstag, 21. Mai 2019 17:50 (C) 2019 von Leander Jedamus
+# modifiziert Sonntag, 26. Mai 2019 11:46 von Leander Jedamus
 # modifiziert Mittwoch, 22. Mai 2019 19:01 von Leander Jedamus
 # modifiziert Dienstag, 21. Mai 2019 17:52 von Leander Jedamus
 
@@ -37,6 +38,9 @@ DOC		    += vim_c_geaendert.html
 DOC		    += vim_lisp_neu.html
 DOC		    += vim_lisp_enter.html
 DOC		    += vim_lisp_geaendert.html
+
+DOC		    += vim_html_neu.html
+DOC		    += vim_html_geaendert.html
 
 all::		    $(DOC)
 		    @echo done.

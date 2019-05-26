@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Mittwoch, 12. Dezember 2012 07:43 (C) 2012 by Leander Jedamus
+# modifiziert Sonntag, 26. Mai 2019 11:45 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 08:43 von Leander Jedamus
 # modifiziert Dienstag, 19. September 2017 18:03 von Leander Jedamus
 # modifiziert Samstag, 04. Juli 2015 14:01 von Leander Jedamus
@@ -18,14 +19,29 @@
 # modified Mittwoch, 12. Dezember 2012 08:12 by Leander Jedamus
 # modified Mittwoch, 12. Dezember 2012 08:09 by Leander Jedamus
 
+"""
+  Dieses Skript wird aufgerufen, wenn eine *.html-Datei neu
+  erzeugt werden soll.
+
+"""
+
 import os
 import sys
 sys.path.append(os.environ['HOME']+'/vim/python')
 
-import vim
-#import pyvimldap as p
-import pyvim as p
+use_ldap = False
 
+import vim
+
+if use_ldap:
+  import pyvimldap as p
+else:
+  import pyvim as p
+
+"""
+  cb steht für created by, p.u für den User ("Leander Jedamus"),
+  p.em() für die Email-Adresse und p.ww() für die WWW-Adresse.
+"""
 p.b()[0:0] = [ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 " \
                "Transitional//EN\" " \
                "\"http://www.w3.org/TR/html4/loose.dtd\">",
