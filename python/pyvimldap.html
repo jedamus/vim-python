@@ -1,17 +1,17 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html><head><title>Python: module pyvim</title>
+<html><head><title>Python: module pyvimldap</title>
 <meta charset="utf-8">
 </head><body bgcolor="#f0f0f8">
 
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
 <tr bgcolor="#7799ee">
 <td valign=bottom>&nbsp;<br>
-<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>pyvim</strong></big></big></font></td
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>pyvimldap</strong></big></big></font></td
 ><td align=right valign=bottom
-><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/leander/vim/python/pyvim.py">/home/leander/vim/python/pyvim.py</a></font></td></tr></table>
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/leander/vim/python/pyvimldap.py">/home/leander/vim/python/pyvimldap.py</a></font></td></tr></table>
     <p><tt>Das&nbsp;ist&nbsp;das&nbsp;Modul,&nbsp;daß&nbsp;die&nbsp;Hilfsfunktionen&nbsp;für&nbsp;die&nbsp;Arbeit<br>
-in&nbsp;vim&nbsp;bereitstellt.</tt></p>
+in&nbsp;vim&nbsp;bereitstellt&nbsp;(benutzt&nbsp;LDAP).</tt></p>
 <p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#aa55cc">
@@ -21,7 +21,7 @@ in&nbsp;vim&nbsp;bereitstellt.</tt></p>
 <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
 <td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="gettext.html">gettext</a><br>
 <a href="inspect.html">inspect</a><br>
-<a href="MySQLdb.html">MySQLdb</a><br>
+<a href="ldap.html">ldap</a><br>
 </td><td width="25%" valign=top><a href="os.html">os</a><br>
 <a href="pwd.html">pwd</a><br>
 <a href="re.html">re</a><br>
@@ -76,19 +76,12 @@ das&nbsp;Jahr,&nbsp;in&nbsp;dem&nbsp;die&nbsp;Datei&nbsp;erzeugt&nbsp;wurde&nbsp
 Datei&nbsp;als&nbsp;Erster&nbsp;geschrieben&nbsp;hat,&nbsp;steht.<br>
 Um&nbsp;die&nbsp;jeweilige&nbsp;Sprache&nbsp;zu&nbsp;unterstützen,&nbsp;wird&nbsp;als&nbsp;Funktion<br>
 _&nbsp;(gettext)&nbsp;aufgerufen.</tt></dd></dl>
- <dl><dt><a name="-db"><strong>db</strong></a>()</dt><dd><tt>DataBase:<br>
-&nbsp;<br>
-Diese&nbsp;Funktion&nbsp;nimmt&nbsp;Kontakt&nbsp;mit&nbsp;der&nbsp;Datenbank&nbsp;auf.<br>
-Es&nbsp;werden&nbsp;die&nbsp;Attribute&nbsp;email,&nbsp;www&nbsp;und&nbsp;package&nbsp;eingelesen&nbsp;<br>
-und&nbsp;gesetzt.</tt></dd></dl>
  <dl><dt><a name="-drs"><strong>drs</strong></a>()</dt><dd><tt>DeleteRegisters:<br>
 &nbsp;<br>
 Hier&nbsp;werden&nbsp;alle&nbsp;Register&nbsp;von&nbsp;a&nbsp;bis&nbsp;z&nbsp;zurückgesetzt.</tt></dd></dl>
  <dl><dt><a name="-em"><strong>em</strong></a>()</dt><dd><tt>email:<br>
 &nbsp;<br>
 Hier&nbsp;wird&nbsp;die&nbsp;Email-Adresse&nbsp;des&nbsp;Benutzers&nbsp;zurückgegeben.<br>
-Ist&nbsp;email&nbsp;anfangs&nbsp;leer,&nbsp;wird&nbsp;die&nbsp;Datenbank&nbsp;befragt&nbsp;und&nbsp;dort<br>
-email&nbsp;gesetzt.<br>
 Es&nbsp;sollte&nbsp;sowas&nbsp;wie&nbsp;"ljedamus@web.de"&nbsp;zurückgegeben&nbsp;werden.<br>
 Das&nbsp;wird&nbsp;in&nbsp;HTML-Dateien&nbsp;benötigt&nbsp;(siehe&nbsp;"vim_html_neu.py").</tt></dd></dl>
  <dl><dt><a name="-escape"><strong>escape</strong></a>(str)</dt><dd><tt>escape:<br>
@@ -110,9 +103,7 @@ _&nbsp;(gettext)&nbsp;aufgerufen.</tt></dd></dl>
 Diese&nbsp;Funktion&nbsp;gibt&nbsp;den&nbsp;Namen&nbsp;der&nbsp;Datei&nbsp;zurück&nbsp;(mit&nbsp;Pfad).</tt></dd></dl>
  <dl><dt><a name="-pa"><strong>pa</strong></a>()</dt><dd><tt>package:<br>
 &nbsp;<br>
-Hier&nbsp;wird&nbsp;das&nbsp;Package&nbsp;des&nbsp;Benutzers&nbsp;zurückgegeben.&nbsp;Ist<br>
-package&nbsp;anfangs&nbsp;leer,&nbsp;wird&nbsp;die&nbsp;Datenbank&nbsp;befragt&nbsp;und&nbsp;dort<br>
-package&nbsp;gesetzt.<br>
+Hier&nbsp;wird&nbsp;das&nbsp;Package&nbsp;des&nbsp;Benutzers&nbsp;zurückgegeben.<br>
 Es&nbsp;sollte&nbsp;sowas&nbsp;wie&nbsp;"de.ljedamus"&nbsp;zurückgegeben&nbsp;werden.<br>
 Das&nbsp;wird&nbsp;in&nbsp;Java-Dateien&nbsp;benötigt&nbsp;(siehe&nbsp;"vim_java_neu.py"):<br>
 Heißt&nbsp;die&nbsp;Java-Datei&nbsp;beispielsweise<br>
@@ -135,8 +126,7 @@ Wenn&nbsp;das&nbsp;Register&nbsp;reg="a"&nbsp;ist,&nbsp;dann&nbsp;kann&nbsp;man&
 @a&nbsp;abrufen.</tt></dd></dl>
  <dl><dt><a name="-ww"><strong>ww</strong></a>()</dt><dd><tt>www:<br>
 &nbsp;<br>
-Hier&nbsp;wird&nbsp;die&nbsp;Web-Adresse&nbsp;des&nbsp;Benutzers&nbsp;zurückgegeben.&nbsp;Ist&nbsp;www<br>
-anfangs&nbsp;leer,&nbsp;wird&nbsp;die&nbsp;Datenbank&nbsp;befragt&nbsp;und&nbsp;dort&nbsp;www&nbsp;gesetzt.<br>
+Hier&nbsp;wird&nbsp;die&nbsp;Web-Adresse&nbsp;des&nbsp;Benutzers&nbsp;zurückgegeben.<br>
 Es&nbsp;sollte&nbsp;sowas&nbsp;wie&nbsp;"<a href="http://www.ljedamus.de/">http://www.ljedamus.de/</a>"&nbsp;zurückgegeben<br>
 werden.<br>
 Das&nbsp;wird&nbsp;in&nbsp;HTML-Dateien&nbsp;benötigt&nbsp;(siehe&nbsp;"vim_html_neu.py").</tt></dd></dl>
@@ -147,14 +137,16 @@ Das&nbsp;wird&nbsp;in&nbsp;HTML-Dateien&nbsp;benötigt&nbsp;(siehe&nbsp;"vim_htm
 <font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
     
 <tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
-<td width="100%"><strong>dt</strong> = 'Sunday, 26. May 2019 12:32'<br>
+<td width="100%"><strong>dn</strong> = 'ou=kottenheim,dc=ljedamus,dc=de'<br>
+<strong>dt</strong> = 'Sunday, 26. May 2019 12:39'<br>
+<strong>e</strong> = NO_SUCH_OBJECT({'desc': 'No such object'},)<br>
 <strong>email</strong> = ''<br>
 <strong>i</strong> = 'leander'<br>
+<strong>l</strong> = &lt;ldap.ldapobject.SimpleLDAPObject instance&gt;<br>
 <strong>package</strong> = ''<br>
 <strong>scriptname</strong> = 'pyvim.py'<br>
 <strong>scriptpath</strong> = '/home/leander/vim/python'<br>
 <strong>trans</strong> = &lt;gettext.GNUTranslations instance&gt;<br>
-<strong>u</strong> = 'Leander Jedamus'<br>
 <strong>www</strong> = ''<br>
 <strong>y</strong> = '2019'</td></tr></table>
 </body></html>

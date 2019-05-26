@@ -1,12 +1,12 @@
 # erzeugt Dienstag, 21. Mai 2019 17:50 (C) 2019 von Leander Jedamus
-# modifiziert Sonntag, 26. Mai 2019 11:46 von Leander Jedamus
+# modifiziert Sonntag, 26. Mai 2019 12:32 von Leander Jedamus
 # modifiziert Mittwoch, 22. Mai 2019 19:01 von Leander Jedamus
 # modifiziert Dienstag, 21. Mai 2019 17:52 von Leander Jedamus
 
 RM		    = rm -f
 include Makefile.documentation
 
-DOC		    = pyvim.html
+DOC		    = pyvim.html pyvimldap.html
 
 DOC		    += vim_py_neu.html
 DOC		    += vim_py_enter.html
