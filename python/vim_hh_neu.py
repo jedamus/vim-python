@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Montag, 10. Dezember 2012 16:59 (C) 2012 by Leander Jedamus
+# modifiziert Montag, 27. Mai 2019 11:55 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 08:43 von Leander Jedamus
 # modifiziert Freitag, 13. Juli 2018 13:42 von Leander Jedamus
 # modifiziert Montag, 09. Juli 2018 10:35 von Leander Jedamus
@@ -16,6 +17,17 @@
 # modified Mittwoch, 12. Dezember 2012 08:12 by Leander Jedamus
 # modified Dienstag, 11. Dezember 2012 17:20 by Leander Jedamus
 # modified Montag, 10. Dezember 2012 17:22 by Leander Jedamus
+
+"""
+  Dieses Skript wird aufgerufen, wenn eine *.hh-, *.hpp-, *.h++-
+  *.hxx- oder *.H-Datei neu erzeugt werden soll.
+  Es werden unter anderem der Name der *.h-Datei, created by und
+  eine Präprozessor-Direktive gesetzt, die dafür sorgt, daß die
+  Header-Datei nur einmal eingelesen wird. Dazu wird der Dateiname
+  ohne Pfad genommen und alle Punkte durch den Unterstrich ersetzt,
+  ein +-Zeichen durch "PLUS" ersetzt und der Dateiname groß
+  geschrieben.
+"""
 
 import os
 import sys

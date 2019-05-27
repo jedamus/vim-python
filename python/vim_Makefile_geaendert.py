@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Montag, 10. Dezember 2012 17:24 (C) 2012 by Leander Jedamus
+# modifiziert Montag, 27. Mai 2019 12:18 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 08:39 von Leander Jedamus
 # modifiziert Samstag, 04. Juli 2015 14:04 von Leander Jedamus
 # modifiziert Montag, 18. Februar 2013 13:05 von Leander Jedamus
@@ -12,6 +13,13 @@
 # modified Mittwoch, 12. Dezember 2012 08:16 by Leander Jedamus
 # modified Mittwoch, 12. Dezember 2012 08:10 by Leander Jedamus
 # modified Montag, 10. Dezember 2012 17:28 by Leander Jedamus
+
+"""
+  Dieses Skript wird aufgerufen, wenn sich ein Makefile-Datei
+  geändert hat. Es wird nur ein Kommentar verändert oder neu
+  gesetzt, wenn es zu dem aktuellen Datum keine Zeile für die
+  Modifikation gibt.
+"""
 
 import os
 import sys

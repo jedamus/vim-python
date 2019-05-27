@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Freitag, 28. Dezember 2012 16:10 (C) 2012 by Leander Jedamus
+# modifiziert Montag, 27. Mai 2019 12:11 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 08:42 von Leander Jedamus
 # modifiziert Dienstag, 19. September 2017 17:55 von Leander Jedamus
 # modifiziert Mittwoch, 13. September 2017 09:45 von Leander Jedamus
@@ -15,6 +16,14 @@
 # modified Montag, 31. Dezember 2012 08:25 by Leander Jedamus
 # modified Freitag, 28. Dezember 2012 16:48 by Leander Jedamus
 # modified Freitag, 28. Dezember 2012 16:25 by Leander Jedamus
+
+"""
+  Dieses Skript wird aufgerufen, wenn eine *.cob-Datei neu
+  erzeugt werden soll. Dazu wird aus dem Dateinamen ohne Pfad
+  und ohne Endung .cob ein String erzeugt. In diesem werden
+  alle Punkte durch den Unterstrich ersetzt und dann als
+  PROGRAM-ID genommen.
+"""
 
 import os
 import sys

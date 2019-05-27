@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Montag, 10. Dezember 2012 17:29 (C) 2012 by Leander Jedamus
+# modifiziert Montag, 27. Mai 2019 11:41 von Leander Jedamus
 # modifiziert Mittwoch, 22. Mai 2019 18:55 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 08:42 von Leander Jedamus
 # modifiziert Montag, 09. Juli 2018 10:31 von Leander Jedamus
@@ -30,9 +31,8 @@ sys.path.append(os.environ['HOME']+'/vim/python')
 import vim
 import pyvim as p
 
-
 """
-  Das ist der Header einer C-Datei. cb steht für created by
+  Das ist der Header einer c-Datei. cb steht für created by
   (siehe pyvim.py).
   Es wird ein String sccsid gesetzt mit dem Dateinamen ohne
   Pfad (bn), das Jahr (y) und der uid (u).

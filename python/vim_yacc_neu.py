@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Montag, 10. Dezember 2012 17:29 (C) 2012 by Leander Jedamus
+# modifiziert Montag, 27. Mai 2019 12:13 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 08:41 von Leander Jedamus
 # modifiziert Dienstag, 19. September 2017 18:28 von Leander Jedamus
 # modifiziert Samstag, 04. Juli 2015 14:17 von Leander Jedamus
@@ -15,6 +16,11 @@
 # modified Mittwoch, 12. Dezember 2012 08:11 by Leander Jedamus
 # modified Dienstag, 11. Dezember 2012 17:31 by Leander Jedamus
 # modified Montag, 10. Dezember 2012 17:33 by Leander Jedamus
+
+"""
+  Dieses Skript wird aufgerufen, wenn eine *.y-Datei neu
+  erzeugt werden soll.
+"""
 
 import os
 import sys

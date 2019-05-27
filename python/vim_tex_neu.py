@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Montag, 10. Dezember 2012 16:13 (C) 2012 by Leander Jedamus
+# modifiziert Montag, 27. Mai 2019 12:15 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 08:41 von Leander Jedamus
 # modifiziert Dienstag, 19. September 2017 18:27 von Leander Jedamus
 # modifiziert Samstag, 04. Juli 2015 14:03 von Leander Jedamus
@@ -11,6 +12,11 @@
 # modified Montag, 31. Dezember 2012 08:58 by Leander Jedamus
 # modified Mittwoch, 12. Dezember 2012 08:28 by Leander Jedamus
 # modified Montag, 10. Dezember 2012 16:29 by Leander Jedamus
+
+"""
+  Dieses Skript wird aufgerufen, wenn eine *.tex-Datei neu
+  erzeugt werden soll.
+"""
 
 import os
 import sys

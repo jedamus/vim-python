@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Freitag, 28. Dezember 2012 16:33 (C) 2012 by Leander Jedamus
+# modifiziert Montag, 27. Mai 2019 12:06 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 08:43 von Leander Jedamus
 # modifiziert Dienstag, 19. September 2017 17:59 von Leander Jedamus
 # modifiziert Samstag, 04. Juli 2015 14:01 von Leander Jedamus
@@ -12,6 +13,15 @@
 # modified Montag, 28. Januar 2013 13:06 by Leander Jedamus
 # modified Montag, 31. Dezember 2012 08:30 by Leander Jedamus
 # modified Freitag, 28. Dezember 2012 16:46 by Leander Jedamus
+
+"""
+  Dieses Skript wird aufgerufen, wenn eine *.f-Datei neu
+  erzeugt werden soll. Dazu wird aus dem Dateinamen ohne
+  Pfad und ohne die Endung .f77 oder .f95 ein String
+  erzeugt, in dem alle Punkte durch den Unterstrich
+  ersetzt werden. Das wird dann als Programmname
+  genommen.
+"""
 
 import os
 import sys

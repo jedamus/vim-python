@@ -1,4 +1,5 @@
 # erzeugt Dienstag, 21. Mai 2019 17:50 (C) 2019 von Leander Jedamus
+# modifiziert Montag, 27. Mai 2019 12:22 von Leander Jedamus
 # modifiziert Sonntag, 26. Mai 2019 12:32 von Leander Jedamus
 # modifiziert Mittwoch, 22. Mai 2019 19:01 von Leander Jedamus
 # modifiziert Dienstag, 21. Mai 2019 17:52 von Leander Jedamus
@@ -41,6 +42,42 @@ DOC		    += vim_lisp_geaendert.html
 
 DOC		    += vim_html_neu.html
 DOC		    += vim_html_geaendert.html
+
+DOC		    += vim_cc_neu.html
+DOC		    += vim_cc_geaendert.html
+
+DOC		    += vim_h_neu.html
+DOC		    += vim_h_geaendert.html
+
+DOC		    += vim_hh_neu.html
+DOC		    += vim_hh_geaendert.html
+
+DOC		    += vim_jsp_neu.html
+DOC		    += vim_jsp_geaendert.html
+
+DOC		    += vim_f_neu.html
+DOC		    += vim_f_geaendert.html
+
+DOC		    += vim_css_neu.html
+DOC		    += vim_css_geaendert.html
+
+DOC		    += vim_cob_neu.html
+DOC		    += vim_cob_geaendert.html
+
+DOC		    += vim_yacc_neu.html
+DOC		    += vim_yacc_geaendert.html
+
+DOC		    += vim_tex_neu.html
+DOC		    += vim_tex_geaendert.html
+
+DOC		    += vim_sh_neu.html
+DOC		    += vim_sh_geaendert.html
+
+DOC		    += vim_Makefile_neu.html
+DOC		    += vim_Makefile_geaendert.html
+
+DOC		    += vim_lex_neu.html
+DOC		    += vim_lex_geaendert.html
 
 all::		    $(DOC)
 		    @echo done.
