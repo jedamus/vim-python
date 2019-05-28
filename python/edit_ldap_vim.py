@@ -1,8 +1,8 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 # coding=utf-8
 
 # erzeugt Donnerstag, 14. März 2013 11:02 (C) 2013 von Leander Jedamus
-# modifiziert Samstag, 04. Juli 2015 13:59 von Leander Jedamus
+# modifiziert Dienstag, 28. Mai 2019 10:42 von Leander Jedamus
 # modifiziert Dienstag, 19. März 2013 15:12 von Leander Jedamus
 # modifiziert Montag, 18. März 2013 17:54 von Leander Jedamus
 # modifiziert Sonntag, 17. März 2013 09:06 von Leander Jedamus
@@ -33,10 +33,10 @@ from PyQt4.QtGui import (QApplication, QDialog, QHBoxLayout, QVBoxLayout,
 scriptpath   = os.path.abspath(os.path.dirname(sys.argv[0]))
 imagespath   = os.path.join(scriptpath,"images")
 qmPath       = "/usr/share/qt4/translations"
-login_dn     = "cn=admin,dc=ljedamus,dc=de"
-ldap_host    = "marvin.fritz.box"
-ldap_dn      = "ou=kottenheim,dc=ljedamus,dc=de"
-jpeg_dirname = "/home/ljedamus/Bilder"
+login_dn     = "cn=admin,dc=jedamus-solutions,dc=de"
+ldap_host    = "ldap://localhost:389"
+ldap_dn      = "ou=kottenheim,dc=jedamus-solutions,dc=de"
+jpeg_dirname = "/home/leander/Bilder"
 jpegPhoto    = "jpegPhoto"
 
 try:
@@ -396,7 +396,7 @@ def error_msg(widget, header, e):
     QMessageBox().warning(widget,header,errstr)
 
 if __name__ == "__main__":
-    l = ldap.open(ldap_host)
+    l = ldap.initialize(ldap_host)
     app = QApplication(sys.argv)
 
     app.setWindowIcon(QIcon(os.path.join(imagespath,
