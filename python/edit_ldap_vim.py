@@ -2,7 +2,7 @@
 # coding=utf-8
 
 # erzeugt Donnerstag, 14. März 2013 11:02 (C) 2013 von Leander Jedamus
-# modifiziert Mittwoch, 29. Mai 2019 07:44 von Leander Jedamus
+# modifiziert Mittwoch, 29. Mai 2019 10:26 von Leander Jedamus
 # modifiziert Dienstag, 28. Mai 2019 10:42 von Leander Jedamus
 # modifiziert Dienstag, 19. März 2013 15:12 von Leander Jedamus
 # modifiziert Montag, 18. März 2013 17:54 von Leander Jedamus
@@ -167,7 +167,7 @@ class EditDialog(QDialog):
             self.setLayout(layout)
             self.setWindowTitle(self.name)
 
-        except ldap.LDAPError, e:
+        except ldap.LDAPError as e:
             error_msg(self, _("LDAP Error"), e)
 
 
@@ -195,7 +195,7 @@ class EditDialog(QDialog):
             if not self.error: self.l.delete_s(dn)
             self.l.add_s(dn, res)
             self.error = False
-        except ldap.LDAPError, e:
+        except ldap.LDAPError as e:
             error_msg(self, _("LDAP Error"), e)
             self.error = True
         finally:
@@ -297,7 +297,7 @@ class ListDialog(QDialog):
             self.setLayout(layout)
             self.setWindowTitle(self.name)
 
-        except ldap.LDAPError, e:
+        except ldap.LDAPError as e:
             error_msg(self, _("LDAP Error"), e)
 
     def edit(self):
@@ -336,7 +336,7 @@ class ListDialog(QDialog):
              ]          )
             self.listWidget.addItem(line.text)
             self.listWidget.setCurrentRow(self.listWidget.count() - 1)
-        except ldap.LDAPError, e:
+        except ldap.LDAPError as e:
             error_msg(self, _("LDAP Error"), e)
 
     def remove(self):
@@ -353,7 +353,7 @@ class ListDialog(QDialog):
                 dn = "uid={l:s},{dn:s}".format(l=item.text(), dn=ldap_dn)
                 try:
                     self.l.delete_s(dn)
-                except ldap.LDAPError, e:
+                except ldap.LDAPError as e:
                     error_msg(self, _("LDAP Error"), e)
 
     def ok(self):
@@ -416,7 +416,7 @@ if __name__ == "__main__":
         list = ListDialog(ldap_dn,l)
         l.simple_bind_s(login_dn, login_pw)
         list.exec_()
-    except ldap.LDAPError, e:
+    except ldap.LDAPError as e:
         error_msg(list, _("Invalid credentials"), e)
 
     l.unbind()
