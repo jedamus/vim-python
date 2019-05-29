@@ -2,6 +2,7 @@
 # coding=utf-8
 
 # erzeugt Donnerstag, 14. März 2013 11:02 (C) 2013 von Leander Jedamus
+# modifiziert Mittwoch, 29. Mai 2019 07:44 von Leander Jedamus
 # modifiziert Dienstag, 28. Mai 2019 10:42 von Leander Jedamus
 # modifiziert Dienstag, 19. März 2013 15:12 von Leander Jedamus
 # modifiziert Montag, 18. März 2013 17:54 von Leander Jedamus
@@ -380,6 +381,7 @@ class LineDialog(QDialog):
 
         self.setLayout(layout)
         self.setWindowTitle(self.name)
+        self.setMinimumSize(500,50)
 
      def ok(self):
         self.text = str(self.edit.text())
