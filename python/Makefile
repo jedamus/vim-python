@@ -1,4 +1,5 @@
 # erzeugt Dienstag, 21. Mai 2019 17:50 (C) 2019 von Leander Jedamus
+# modifiziert Donnerstag, 30. Mai 2019 14:34 von Leander Jedamus
 # modifiziert Montag, 27. Mai 2019 12:22 von Leander Jedamus
 # modifiziert Sonntag, 26. Mai 2019 12:32 von Leander Jedamus
 # modifiziert Mittwoch, 22. Mai 2019 19:01 von Leander Jedamus
@@ -78,6 +79,9 @@ DOC		    += vim_Makefile_geaendert.html
 
 DOC		    += vim_lex_neu.html
 DOC		    += vim_lex_geaendert.html
+
+DOC		    += vim_rb_neu.html
+DOC		    += vim_rb_geaendert.html
 
 all::		    $(DOC)
 		    @echo done.
