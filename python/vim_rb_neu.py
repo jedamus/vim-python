@@ -2,7 +2,7 @@
 # coding=utf-8 -*- python -*-
 
 # erzeugt Donnerstag, 30. Mai 2019 14:30 (C) 2019 von Leander Jedamus
-# modifiziert Freitag, 31. Mai 2019 09:33 von Leander Jedamus
+# modifiziert Freitag, 31. Mai 2019 11:13 von Leander Jedamus
 # modifiziert Donnerstag, 30. Mai 2019 14:32 von Leander Jedamus
 
 """
@@ -29,6 +29,8 @@ p.b()[0:0] = [ "#!/usr/bin/ruby -w",
                "# -*- coding: utf-8 -*-",
                "",
                "# {cb:s}".format(cb=p.cb()),
+               "",
+               'require "English"',
                "",
                "# vim:ai sw=2 sts=4 expandtab"
              ]
