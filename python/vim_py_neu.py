@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Dienstag, 04. Dezember 2012 17:21 (C) 2012 by Leander Jedamus
+# modifiziert Montag, 10. Juni 2019 19:50 von Leander Jedamus
 # modifiziert Mittwoch, 22. Mai 2019 14:36 von Leander Jedamus
 # modifiziert Montag, 20. Mai 2019 17:23 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 08:41 von Leander Jedamus
@@ -33,19 +34,21 @@ sys.path.append(os.environ['HOME']+'/vim/python')
 import vim
 import pyvim as p
 
+line=0
+
 """
   Das ist der Header einer Python-Datei. cb steht für created by
   (siehe pyvim.py).
 """
-p.b()[0:0] = [ "#!/usr/bin/env python",
-               "# coding=utf-8 -*- python -*-",
-               "",
-               "# {cb:s}".format(cb=p.cb()),
-               "",
-               "from __future__ import print_function",
-             ]
-line=6
-command="2k"
+p.b()[line:0] = [ "#!/usr/bin/env python",
+                  "# coding=utf-8 -*- python -*-",
+                  "",
+                  "# {cb:s}".format(cb=p.cb()),
+                  "",
+                  "from __future__ import print_function",
+                ]
+line += 6
+command_line = 7
 
 """
   Wenn der Dateiname mit test_ beginnt, so liegt eine
@@ -96,14 +99,14 @@ if (re.match(r"test_.*\.py",p.bn())):
                  "  testrunner = unittest.TextTestRunner(verbosity=2, stream=sys.stderr)",
                  "  testrunner.run(suite)",
                ]
-  line=32
-  command="33k8j"
+  line += 26
+  command_line += 3
 
 """ Der Abschluß der Datei """
 p.b()[line:0] = [ "",
                "# vim:ai sw=2 sts=4 expandtab"
              ]
-vim.command("normal "+command)
+vim.command("normal " + ":1\n:{cl:d}\n".format(cl=command_line))
 
 # vim:ai sw=2 sts=4 expandtab
 
