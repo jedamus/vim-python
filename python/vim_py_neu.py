@@ -2,7 +2,7 @@
 # encoding=utf-8
 
 # created Dienstag, 04. Dezember 2012 17:21 (C) 2012 by Leander Jedamus
-# modifiziert Montag, 10. Juni 2019 19:50 von Leander Jedamus
+# modifiziert Montag, 10. Juni 2019 20:31 von Leander Jedamus
 # modifiziert Mittwoch, 22. Mai 2019 14:36 von Leander Jedamus
 # modifiziert Montag, 20. Mai 2019 17:23 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 08:41 von Leander Jedamus
@@ -34,20 +34,22 @@ sys.path.append(os.environ['HOME']+'/vim/python')
 import vim
 import pyvim as p
 
-line=0
+command_line = 0
+insert = []
 
 """
   Das ist der Header einer Python-Datei. cb steht für created by
   (siehe pyvim.py).
 """
-p.b()[line:0] = [ "#!/usr/bin/env python",
-                  "# coding=utf-8 -*- python -*-",
-                  "",
-                  "# {cb:s}".format(cb=p.cb()),
-                  "",
-                  "from __future__ import print_function",
-                ]
-line += 6
+kette = [ "#!/usr/bin/env python",
+          "# coding=utf-8 -*- python -*-",
+          "",
+          "# {cb:s}".format(cb=p.cb()),
+          "",
+          "from __future__ import print_function",
+        ]
+
+insert.extend(kette)
 command_line = 7
 
 """
@@ -71,41 +73,43 @@ if (re.match(r"test_.*\.py",p.bn())):
   """ Name der Testmethode """
   tm = "test{ln:s}".format(ln=ln)
 
-  p.b()[line:0] = [
-                 "import sys",
-                 "import unittest",
-                 "import {ln:s}".format(ln=ln),
-                 "",
-                 "class {t:s}(unittest.TestCase):".format(t=t),
-                 "",
-                 "  def setUp(self):",
-                 "    pass",
-                 "",
-                 "  def tearDown(self):",
-                 "    pass",
-                 "",
-                 "  def {tm:s}1(self):".format(tm=tm),
-                 "    pass",
-                 "",
-                 "  def {tm:s}2(self):".format(tm=tm),
-                 "    pass",
-                 "",
-                 "if __name__ == '__main__':",
-                 "# unittest.main()",
-                 "  suite = unittest.TestSuite()",
-                 "  test1 = {t:s}('{tm:s}1')".format(t=t,tm=tm),
-                 "  test2 = {t:s}('{tm:s}2')".format(t=t,tm=tm),
-                 "  suite.addTests((test1, test2))",
-                 "  testrunner = unittest.TextTestRunner(verbosity=2, stream=sys.stderr)",
-                 "  testrunner.run(suite)",
-               ]
-  line += 26
+  kette = [ "import sys",
+            "import unittest",
+            "import {ln:s}".format(ln=ln),
+            "",
+            "class {t:s}(unittest.TestCase):".format(t=t),
+            "",
+            "  def setUp(self):",
+            "    pass",
+            "",
+            "  def tearDown(self):",
+            "    pass",
+            "",
+            "  def {tm:s}1(self):".format(tm=tm),
+            "    pass",
+            "",
+            "  def {tm:s}2(self):".format(tm=tm),
+            "    pass",
+            "",
+            "if __name__ == '__main__':",
+            "# unittest.main()",
+            "  suite = unittest.TestSuite()",
+            "  test1 = {t:s}('{tm:s}1')".format(t=t,tm=tm),
+            "  test2 = {t:s}('{tm:s}2')".format(t=t,tm=tm),
+            "  suite.addTests((test1, test2))",
+            "  testrunner = unittest.TextTestRunner(verbosity=2, stream=sys.stderr)",
+            "  testrunner.run(suite)",
+          ]
+  insert.extend(kette)
   command_line += 3
 
 """ Der Abschluß der Datei """
-p.b()[line:0] = [ "",
-               "# vim:ai sw=2 sts=4 expandtab"
-             ]
+kette = [ "",
+          "# vim:ai sw=2 sts=4 expandtab",
+        ]
+insert.extend(kette)
+
+p.b()[0:0] = insert
 vim.command("normal " + ":1\n:{cl:d}\n".format(cl=command_line))
 
 # vim:ai sw=2 sts=4 expandtab
