@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Dienstag, 04. Dezember 2012 17:21 (C) 2012 by Leander Jedamus
+# modifiziert Dienstag, 11. Juni 2019 16:31 von Leander Jedamus
 # modifiziert Montag, 10. Juni 2019 20:31 von Leander Jedamus
 # modifiziert Mittwoch, 22. Mai 2019 14:36 von Leander Jedamus
 # modifiziert Montag, 20. Mai 2019 17:23 von Leander Jedamus
@@ -73,23 +74,32 @@ if (re.match(r"test_.*\.py",p.bn())):
   """ Name der Testmethode """
   tm = "test{ln:s}".format(ln=ln)
 
-  kette = [ "import sys",
+  kette = [ "import os",
+            "import sys",
             "import unittest",
             "import {ln:s}".format(ln=ln),
+            "",
+            "file = sys.stderr",
+            "wert1 = 2",
+            "wert2 = 2",
             "",
             "class {t:s}(unittest.TestCase):".format(t=t),
             "",
             "  def setUp(self):",
-            "    pass",
+            "    print('Erzeuge Testdaten. ', sep='', end='', file=file)",
             "",
             "  def tearDown(self):",
-            "    pass",
+            "    print('Lösche Testdaten. ', sep='', end='', file=file)",
+            "    try:",
+            "      os.remove('not_existing.txt')",
+            "    except OSError:",
+            "      pass",
             "",
             "  def {tm:s}1(self):".format(tm=tm),
-            "    pass",
+            "    self.assertEqual(wert1,wert2,'Werte sind unterschiedlich.')",
             "",
             "  def {tm:s}2(self):".format(tm=tm),
-            "    pass",
+            "    self.assertEqual(-1*wert1,-1*wert2)",
             "",
             "if __name__ == '__main__':",
             "# unittest.main()",
@@ -97,11 +107,11 @@ if (re.match(r"test_.*\.py",p.bn())):
             "  test1 = {t:s}('{tm:s}1')".format(t=t,tm=tm),
             "  test2 = {t:s}('{tm:s}2')".format(t=t,tm=tm),
             "  suite.addTests((test1, test2))",
-            "  testrunner = unittest.TextTestRunner(verbosity=2, stream=sys.stderr)",
+            "  testrunner = unittest.TextTestRunner(verbosity=2, stream=file)",
             "  testrunner.run(suite)",
           ]
   insert.extend(kette)
-  command_line += 3
+  command_line += 4
 
 """ Der Abschluß der Datei """
 kette = [ "",
