@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Dienstag, 04. Dezember 2012 17:21 (C) 2012 by Leander Jedamus
+# modifiziert Mittwoch, 12. Juni 2019 12:41 von Leander Jedamus
 # modifiziert Dienstag, 11. Juni 2019 16:31 von Leander Jedamus
 # modifiziert Montag, 10. Juni 2019 20:31 von Leander Jedamus
 # modifiziert Mittwoch, 22. Mai 2019 14:36 von Leander Jedamus
@@ -96,10 +97,11 @@ if (re.match(r"test_.*\.py",p.bn())):
             "      pass",
             "",
             "  def {tm:s}1(self):".format(tm=tm),
-            "    self.assertEqual(wert1,wert2,'Werte sind unterschiedlich.')",
+            "    msg = 'Werte sind unterschiedlich.'",
+            "    self.assertEqual(wert1, wert2, msg)",
             "",
             "  def {tm:s}2(self):".format(tm=tm),
-            "    self.assertEqual(-1*wert1,-1*wert2)",
+            "    self.assertEqual(-1*wert1, -1*wert2)",
             "",
             "if __name__ == '__main__':",
             "# unittest.main()",
