@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Mittwoch, 05. Dezember 2012 06:23 (C) 2012 by Leander Jedamus
+# modifiziert Mittwoch, 30. Oktober 2019 12:55 von Leander Jedamus
 # modifiziert Montag, 27. Mai 2019 12:17 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 08:41 von Leander Jedamus
 # modifiziert Dienstag, 19. September 2017 18:27 von Leander Jedamus
@@ -17,18 +18,32 @@
 # modified Mittwoch, 05. Dezember 2012 06:24 by Leander Jedamus
 
 """
-  Dieses Skript wird aufgerufen, wenn eine *.sh-Datei neu
-  erzeugt werden soll.
+  Dieses Skript wird aufgerufen, wenn eine *.sh-, *.csh-,
+  *.tcsh-, *.bash- oder *.zsh-Datei neu erzeugt werden
+  soll.
 """
 
 import os
 import sys
+import re
 sys.path.append(os.environ['HOME']+'/vim/python')
 
 import vim
 import pyvim as p
 
-p.b()[0:0] = [ "#!/bin/sh",
+shell = "sh"
+pfad = "/usr/bin/env "
+
+if (re.match(r".*\.csh",p.bn())):
+  shell = "csh"
+if (re.match(r".*\.tcsh",p.bn())):
+  shell = "tcsh"
+if (re.match(r".*\.bash",p.bn())):
+  shell = "bash"
+if (re.match(r".*\.zsh",p.bn())):
+  shell = "zsh"
+
+p.b()[0:0] = [ "#!{pfad:s}{shell:s}".format(pfad=pfad,shell=shell),
                "",
                "# {cb:s}".format(cb=p.cb()),
 	       "",
