@@ -7,7 +7,8 @@ syntax enable
 set modeline
 set modelines=2
 
-"set mouse=a
+set mouse=a
+:filetype on
 
 "set fileencoding=utf-8
 "set fileencoding=iso-8859-1
