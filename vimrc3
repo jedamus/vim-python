@@ -8,6 +8,7 @@ set modeline
 set modelines=2
 
 set mouse=a
+
 :filetype on
 
 "set fileencoding=utf-8
@@ -33,66 +34,66 @@ if !exists("autocommands_loaded")
   let autocommands_loaded = 1
 
   " fuer python:
-  source ~/vim/config/python.vim
+  source ~/.vim/config3/python.vim
 
   " fuer perl:
-  source ~/vim/config/perl.vim
+  source ~/.vim/config3/perl.vim
 
   " fuer ruby:
-  source ~/vim/config/ruby.vim
+  source ~/.vim/config3/ruby.vim
 
   " fuer pascal:
-  source ~/vim/config/pascal.vim
+  source ~/.vim/config3/pascal.vim
 
   " fuer shell-skripte:
-  source ~/vim/config/sh.vim
+  source ~/.vim/config3/sh.vim
 
   " fuer c:
-  source ~/vim/config/c.vim
+  source ~/.vim/config3/c.vim
 
   " fuer cc:
-  source ~/vim/config/cc.vim
+  source ~/.vim/config3/cc.vim
 
   " fuer cobol:
-  source ~/vim/config/cobol.vim
+  source ~/.vim/config3/cobol.vim
 
   " fuer cascading stylesheets:
-  source ~/vim/config/css.vim
+  source ~/.vim/config3/css.vim
 
   " fuer fortran:
-  source ~/vim/config/fortran.vim
+  source ~/.vim/config3/fortran.vim
 
   " fuer h:
-  source ~/vim/config/h.vim
+  source ~/.vim/config3/h.vim
 
   " fuer hh:
-  source ~/vim/config/hh.vim
+  source ~/.vim/config3/hh.vim
 
   " fuer html:
-  source ~/vim/config/html.vim
+  source ~/.vim/config3/html.vim
 
   " fuer java:
-  source ~/vim/config/java.vim
+  source ~/.vim/config3/java.vim
 
   " fuer javascript:
-  source ~/vim/config/javascript.vim
+  source ~/.vim/config3/javascript.vim
 
   " fuer jsp:
-  source ~/vim/config/jsp.vim
+  source ~/.vim/config3/jsp.vim
 
   " fuer lisp:
-  source ~/vim/config/lisp.vim
+  source ~/.vim/config3/lisp.vim
 
   " fuer tex:
-  source ~/vim/config/tex.vim
+  source ~/.vim/config3/tex.vim
 
   " fuer Makefiles:
-  source ~/vim/config/Makefile.vim
+  source ~/.vim/config3/Makefile.vim
 
   " fuer lex oder flex:
-  source ~/vim/config/lex.vim
+  source ~/.vim/config3/lex.vim
 
   " fuer yacc oder bison:
-  source ~/vim/config/yacc.vim
+  source ~/.vim/config3/yacc.vim
 endif
 

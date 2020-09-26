@@ -34,66 +34,66 @@ if !exists("autocommands_loaded")
   let autocommands_loaded = 1
 
   " fuer python:
-  source ~/vim/config3/python.vim
+  source ~/.vim/config/python.vim
 
   " fuer perl:
-  source ~/vim/config3/perl.vim
+  source ~/.vim/config/perl.vim
 
   " fuer ruby:
-  source ~/vim/config3/ruby.vim
+  source ~/.vim/config/ruby.vim
 
   " fuer pascal:
-  source ~/vim/config3/pascal.vim
+  source ~/.vim/config/pascal.vim
 
   " fuer shell-skripte:
-  source ~/vim/config3/sh.vim
+  source ~/.vim/config/sh.vim
 
   " fuer c:
-  source ~/vim/config3/c.vim
+  source ~/.vim/config/c.vim
 
   " fuer cc:
-  source ~/vim/config3/cc.vim
+  source ~/.vim/config/cc.vim
 
   " fuer cobol:
-  source ~/vim/config3/cobol.vim
+  source ~/.vim/config/cobol.vim
 
   " fuer cascading stylesheets:
-  source ~/vim/config3/css.vim
+  source ~/.vim/config/css.vim
 
   " fuer fortran:
-  source ~/vim/config3/fortran.vim
+  source ~/.vim/config/fortran.vim
 
   " fuer h:
-  source ~/vim/config3/h.vim
+  source ~/.vim/config/h.vim
 
   " fuer hh:
-  source ~/vim/config3/hh.vim
+  source ~/.vim/config/hh.vim
 
   " fuer html:
-  source ~/vim/config3/html.vim
+  source ~/.vim/config/html.vim
 
   " fuer java:
-  source ~/vim/config3/java.vim
+  source ~/.vim/config/java.vim
 
   " fuer javascript:
-  source ~/vim/config3/javascript.vim
+  source ~/.vim/config/javascript.vim
 
   " fuer jsp:
-  source ~/vim/config3/jsp.vim
+  source ~/.vim/config/jsp.vim
 
   " fuer lisp:
-  source ~/vim/config3/lisp.vim
+  source ~/.vim/config/lisp.vim
 
   " fuer tex:
-  source ~/vim/config3/tex.vim
+  source ~/.vim/config/tex.vim
 
   " fuer Makefiles:
-  source ~/vim/config3/Makefile.vim
+  source ~/.vim/config/Makefile.vim
 
   " fuer lex oder flex:
-  source ~/vim/config3/lex.vim
+  source ~/.vim/config/lex.vim
 
   " fuer yacc oder bison:
-  source ~/vim/config3/yacc.vim
+  source ~/.vim/config/yacc.vim
 endif
 

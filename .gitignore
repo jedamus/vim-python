@@ -1,2 +1,3 @@
 zshprompt.py
 *.pyc
+.netrwhist
