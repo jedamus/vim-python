@@ -6,5 +6,5 @@ autocmd BufNewFile *.tcsh pyfile ~/vim/python/vim_sh_neu.py
 autocmd BufWritePre *.tcsh pyfile ~/vim/python/vim_sh_geaendert.py
 autocmd BufNewFile *.bash pyfile ~/vim/python/vim_sh_neu.py
 autocmd BufWritePre *.bash pyfile ~/vim/python/vim_sh_geaendert.py
-autocmd BufNewFile *.zsh pyfile ~/vim/python/vim_sh_neu.py
+autocmd BufNewFile *.zsh pyfile ~/vim/python/vim_zsh_neu.py
 autocmd BufWritePre *.zsh pyfile ~/vim/python/vim_sh_geaendert.py
