@@ -1,4 +1,5 @@
 # erzeugt Dienstag, 21. Mai 2019 17:50 (C) 2019 von Leander Jedamus
+# modifiziert Samstag, 26. September 2020 21:49 von Leander Jedamus
 # modifiziert Freitag, 31. Mai 2019 09:32 von Leander Jedamus
 # modifiziert Donnerstag, 30. Mai 2019 14:34 von Leander Jedamus
 # modifiziert Montag, 27. Mai 2019 12:22 von Leander Jedamus
@@ -73,6 +74,7 @@ DOC		    += vim_tex_neu.html
 DOC		    += vim_tex_geaendert.html
 
 DOC		    += vim_sh_neu.html
+DOC		    += vim_zsh_neu.html
 DOC		    += vim_sh_geaendert.html
 
 DOC		    += vim_Makefile_neu.html
