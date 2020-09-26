@@ -23,7 +23,7 @@
 
 import os
 import sys
-sys.path.append(os.environ['HOME']+'/vim/python')
+sys.path.append(os.environ['HOME']+'/.vim/python')
 import pyvim as p
 
 p.M(3,"// ")

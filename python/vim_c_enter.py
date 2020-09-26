@@ -2,6 +2,7 @@
 # coding=utf-8
 
 # erzeugt Samstag, 23. September 2017 12:57 (C) 2017 von Leander Jedamus
+# modifiziert Sonntag, 27. September 2020 00:48 von Leander Jedamus
 # modifiziert Mittwoch, 22. Mai 2019 18:51 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 08:42 von Leander Jedamus
 # modifiziert Freitag, 13. Juli 2018 14:08 von Leander Jedamus
@@ -33,7 +34,7 @@
 
 import os
 import sys
-sys.path.append(os.environ['HOME']+'/vim/python')
+sys.path.append(os.environ['HOME']+'/.vim/python')
 
 import pyvim as p
 

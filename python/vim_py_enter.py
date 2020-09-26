@@ -19,14 +19,14 @@
 
   @p (print): Setzt den import der print-Funktion aus __future__.
 
-  @h (home): Setzt einige Zeilen für ~/vim/python/Dateien, die das
+  @h (home): Setzt einige Zeilen für ~/.vim/python/Dateien, die das
   Modul pyvim.py sonst nicht finden.
 
 """
 
 import os
 import sys
-sys.path.append(os.environ['HOME']+"/vim/python")
+sys.path.append(os.environ['HOME']+"/.vim/python")
 
 import pyvim as p
 

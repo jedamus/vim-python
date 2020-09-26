@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Mittwoch, 12. Dezember 2012 07:43 (C) 2012 by Leander Jedamus
+# modifiziert Sonntag, 27. September 2020 00:50 von Leander Jedamus
 # modifiziert Dienstag, 28. Mai 2019 13:16 von Leander Jedamus
 # modifiziert Sonntag, 26. Mai 2019 12:45 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 08:43 von Leander Jedamus
@@ -28,7 +29,7 @@
 
 import os
 import sys
-sys.path.append(os.environ['HOME']+'/vim/python')
+sys.path.append(os.environ['HOME']+'/.vim/python')
 
 use_ldap = False
 
