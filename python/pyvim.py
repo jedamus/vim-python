@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Montag, 31. Dezember 2012 07:57 (C) 2012-2019 by Leander Jedamus
+# modifiziert Sonntag, 27. September 2020 01:35 von Leander Jedamus
 # modifiziert Sonntag, 26. Mai 2019 12:30 von Leander Jedamus
 # modifiziert Dienstag, 21. Mai 2019 16:45 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 10:30 von Leander Jedamus
@@ -59,7 +60,7 @@ import vim
 scriptname = "pyvim.py"
 scriptpath = os.path.realpath(os.path.abspath(os.path.split( \
                inspect.getfile(inspect.currentframe()))[0]))
-#scriptpath = os.path.join(os.environ['HOME'],"vim","python")
+#scriptpath = os.path.join(os.environ['HOME'],".vim","python")
 #for path in sys.path:
     #if(os.access(os.path.join(path,scriptname), os.F_OK)):
         #scriptpath = path
