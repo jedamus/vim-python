@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 # created Montag, 31. Dezember 2012 07:57 (C) 2012 by Leander Jedamus
+# modified Donnerstag, 19. November 2020 09:06 by Leander Jedamus
 # modifiziert Sonntag, 26. Mai 2019 12:38 von Leander Jedamus
 # modifiziert Samstag, 04. Juli 2015 14:00 von Leander Jedamus
 # modifiziert Samstag, 06. April 2013 04:33 von Leander Jedamus
@@ -42,7 +43,7 @@ scriptpath = os.path.realpath(os.path.abspath(os.path.split( \
                inspect.getfile(inspect.currentframe()))[0]))
 
 try:
-    trans = gettext.translation(scriptname,os.path.join(scriptpath,"translate"))
+    trans = gettext.translation(scriptname,os.path.join(scriptpath,"locale"))
     trans.install(unicode=False)
 except IOError:
     def _ (s):

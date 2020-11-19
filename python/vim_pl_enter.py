@@ -2,6 +2,7 @@
 # coding=utf-8
 
 # erzeugt Samstag, 23. September 2017 12:57 (C) 2017 von Leander Jedamus
+# modifiziert Donnerstag, 19. November 2020 09:07 von Leander Jedamus
 # modifiziert Sonntag, 27. September 2020 00:52 von Leander Jedamus
 # modifiziert Mittwoch, 22. Mai 2019 16:38 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 08:40 von Leander Jedamus
@@ -47,7 +48,7 @@ import pyvim as p
 
 p.drs()
 #p.sr("a","iich bin in perl.\n\e")
-p.sr("g","iuse Locale::gettext qw( gettext bindtextdomain textdomain bind_textdomain_codeset );\nuse POSIX;\nuse FindBin '$Bin';\nuse File::Spec;\n\nmy $domain = \"mycopy.pl\";\nbindtextdomain($domain,File::Spec->catfile($Bin,\"translate\"));\ntextdomain($domain);\nbind_textdomain_codeset($domain,\"UTF-8\");\nsub _ ($) { &gettext; }\n\e5k14l")
+p.sr("g","iuse Locale::gettext qw( gettext bindtextdomain textdomain bind_textdomain_codeset );\nuse POSIX;\nuse FindBin '$Bin';\nuse File::Spec;\n\nmy $domain = \"mycopy.pl\";\nbindtextdomain($domain,File::Spec->catfile($Bin,\"locale\"));\ntextdomain($domain);\nbind_textdomain_codeset($domain,\"UTF-8\");\nsub _ ($) { &gettext; }\n\e5k14l")
 
 # if:
 p.sr("i",":se ai\nA\nif () {\n};# if\ekA\n  \e^kwl")

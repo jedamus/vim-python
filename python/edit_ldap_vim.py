@@ -2,6 +2,7 @@
 # coding=utf-8
 
 # erzeugt Donnerstag, 14. März 2013 11:02 (C) 2013 von Leander Jedamus
+# modified Donnerstag, 19. November 2020 09:06 by Leander Jedamus
 # modifiziert Mittwoch, 29. Mai 2019 10:26 von Leander Jedamus
 # modifiziert Dienstag, 28. Mai 2019 10:42 von Leander Jedamus
 # modifiziert Dienstag, 19. März 2013 15:12 von Leander Jedamus
@@ -42,7 +43,7 @@ jpegPhoto    = "jpegPhoto"
 
 try:
     trans = gettext.translation("edit_ldap_vim.py",os.path.join(scriptpath, 
-                                                                "translate"))
+                                                                "locale"))
     trans.install(unicode=True)
 except IOError:
     #print("Fehler in gettext")
