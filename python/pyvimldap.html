@@ -1,0 +1,152 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module pyvimldap</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>pyvimldap</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/leander/.vim/python/pyvimldap.py">/home/leander/.vim/python/pyvimldap.py</a></font></td></tr></table>
+    <p><tt>Das&nbsp;ist&nbsp;das&nbsp;Modul,&nbsp;daß&nbsp;die&nbsp;Hilfsfunktionen&nbsp;für&nbsp;die&nbsp;Arbeit<br>
+in&nbsp;vim&nbsp;bereitstellt&nbsp;(benutzt&nbsp;LDAP).</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="gettext.html">gettext</a><br>
+<a href="inspect.html">inspect</a><br>
+<a href="ldap.html">ldap</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+<a href="pwd.html">pwd</a><br>
+<a href="re.html">re</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+<a href="time.html">time</a><br>
+<a href="vim.html">vim</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-M"><strong>M</strong></a>(linenr, prefix<font color="#909090">=''</font>, suffix<font color="#909090">=''</font>)</dt><dd><tt>Modified:<br>
+&nbsp;<br>
+:param&nbsp;int&nbsp;linenr<br>
+&nbsp;&nbsp;Gibt&nbsp;die&nbsp;Zeile&nbsp;an,&nbsp;in&nbsp;der&nbsp;der&nbsp;Kommentar&nbsp;mit&nbsp;der<br>
+&nbsp;&nbsp;Modifikationszeit&nbsp;stehen&nbsp;soll.<br>
+:param&nbsp;str&nbsp;prefix<br>
+&nbsp;&nbsp;Gibt&nbsp;den&nbsp;String&nbsp;für&nbsp;ein&nbsp;Kommentar-Anfang&nbsp;an.<br>
+:param&nbsp;str&nbsp;suffix<br>
+&nbsp;&nbsp;Gibt&nbsp;den&nbsp;String&nbsp;für&nbsp;das&nbsp;Kommentar-Ende&nbsp;an.<br>
+&nbsp;<br>
+Hier&nbsp;wird&nbsp;geschaut,&nbsp;ob&nbsp;schon&nbsp;eine&nbsp;Zeile&nbsp;für&nbsp;das&nbsp;heutige&nbsp;Datum<br>
+und&nbsp;den&nbsp;jetzigen&nbsp;User&nbsp;existiert.&nbsp;Wenn&nbsp;ja,&nbsp;wird&nbsp;nur&nbsp;die&nbsp;Zeit<br>
+aktualisiert,&nbsp;ansonsten&nbsp;eine&nbsp;neue&nbsp;Zeile&nbsp;gesetzt.</tt></dd></dl>
+ <dl><dt><a name="-b"><strong>b</strong></a>()</dt><dd><tt>buffer:<br>
+&nbsp;<br>
+Gibt&nbsp;den&nbsp;aktuellen&nbsp;Buffer&nbsp;des&nbsp;vi&nbsp;zurück.</tt></dd></dl>
+ <dl><dt><a name="-bn"><strong>bn</strong></a>()</dt><dd><tt>basename:<br>
+&nbsp;<br>
+Diese&nbsp;Funktion&nbsp;gibt&nbsp;nur&nbsp;den&nbsp;Namen&nbsp;der&nbsp;Datei&nbsp;zurück<br>
+(also&nbsp;ohne&nbsp;Pfad).</tt></dd></dl>
+ <dl><dt><a name="-by"><strong>by</strong></a>()</dt><dd><tt>by:<br>
+&nbsp;<br>
+Diese&nbsp;Funktion&nbsp;gibt&nbsp;als&nbsp;String&nbsp;die&nbsp;Zeile&nbsp;zurück,&nbsp;in&nbsp;der&nbsp;das<br>
+Copyright-Zeichen,&nbsp;das&nbsp;Jahr,&nbsp;in&nbsp;dem&nbsp;die&nbsp;Datei&nbsp;erzeugt&nbsp;wurde<br>
+und&nbsp;der&nbsp;User,&nbsp;der&nbsp;die&nbsp;Datei&nbsp;als&nbsp;Erster&nbsp;geschrieben&nbsp;hat,&nbsp;steht.<br>
+Um&nbsp;die&nbsp;jeweilige&nbsp;Sprache&nbsp;zu&nbsp;unterstützen,&nbsp;wird&nbsp;als&nbsp;Funktion<br>
+_&nbsp;(gettext)&nbsp;aufgerufen.</tt></dd></dl>
+ <dl><dt><a name="-c"><strong>c</strong></a>()</dt><dd><tt>created:<br>
+&nbsp;<br>
+Diese&nbsp;Funktion&nbsp;gibt&nbsp;als&nbsp;String&nbsp;die&nbsp;Zeile&nbsp;zurück,&nbsp;in&nbsp;der&nbsp;das<br>
+Erzeugungsdatum&nbsp;und&nbsp;die&nbsp;Erzeugungszeit&nbsp;steht.<br>
+Um&nbsp;die&nbsp;jeweilige&nbsp;Sprache&nbsp;zu&nbsp;unterstützen,&nbsp;wird&nbsp;als&nbsp;Funktion<br>
+_&nbsp;(gettext)&nbsp;aufgerufen.</tt></dd></dl>
+ <dl><dt><a name="-cb"><strong>cb</strong></a>()</dt><dd><tt>created_by:<br>
+&nbsp;<br>
+Diese&nbsp;Funktion&nbsp;gibt&nbsp;als&nbsp;String&nbsp;die&nbsp;Zeile&nbsp;zurück,&nbsp;in&nbsp;der&nbsp;das<br>
+Erzeugungsdatum&nbsp;und&nbsp;die&nbsp;Erzeugungszeit,&nbsp;das&nbsp;Copyright-Zeichen,<br>
+das&nbsp;Jahr,&nbsp;in&nbsp;dem&nbsp;die&nbsp;Datei&nbsp;erzeugt&nbsp;wurde&nbsp;und&nbsp;der&nbsp;User,&nbsp;der&nbsp;die<br>
+Datei&nbsp;als&nbsp;Erster&nbsp;geschrieben&nbsp;hat,&nbsp;steht.<br>
+Um&nbsp;die&nbsp;jeweilige&nbsp;Sprache&nbsp;zu&nbsp;unterstützen,&nbsp;wird&nbsp;als&nbsp;Funktion<br>
+_&nbsp;(gettext)&nbsp;aufgerufen.</tt></dd></dl>
+ <dl><dt><a name="-drs"><strong>drs</strong></a>()</dt><dd><tt>DeleteRegisters:<br>
+&nbsp;<br>
+Hier&nbsp;werden&nbsp;alle&nbsp;Register&nbsp;von&nbsp;a&nbsp;bis&nbsp;z&nbsp;zurückgesetzt.</tt></dd></dl>
+ <dl><dt><a name="-em"><strong>em</strong></a>()</dt><dd><tt>email:<br>
+&nbsp;<br>
+Hier&nbsp;wird&nbsp;die&nbsp;Email-Adresse&nbsp;des&nbsp;Benutzers&nbsp;zurückgegeben.<br>
+Es&nbsp;sollte&nbsp;sowas&nbsp;wie&nbsp;"ljedamus@web.de"&nbsp;zurückgegeben&nbsp;werden.<br>
+Das&nbsp;wird&nbsp;in&nbsp;HTML-Dateien&nbsp;benötigt&nbsp;(siehe&nbsp;"vim_html_neu.py").</tt></dd></dl>
+ <dl><dt><a name="-escape"><strong>escape</strong></a>(str)</dt><dd><tt>escape:<br>
+&nbsp;<br>
+:param&nbsp;str&nbsp;str<br>
+&nbsp;&nbsp;Der&nbsp;String,&nbsp;der&nbsp;escaped&nbsp;werden&nbsp;soll.<br>
+&nbsp;<br>
+Hier&nbsp;wird&nbsp;der&nbsp;String&nbsp;str&nbsp;mit&nbsp;Escape-Zeichen&nbsp;versehen,&nbsp;falls&nbsp;in<br>
+str&nbsp;ein&nbsp;\e&nbsp;drin&nbsp;steht.</tt></dd></dl>
+ <dl><dt><a name="-m"><strong>m</strong></a>()</dt><dd><tt>modified:<br>
+&nbsp;<br>
+Diese&nbsp;Funktion&nbsp;gibt&nbsp;als&nbsp;String&nbsp;die&nbsp;Zeile&nbsp;zurück,&nbsp;in&nbsp;der&nbsp;das<br>
+Modifikationsdatum&nbsp;und&nbsp;die&nbsp;Modifikationszeit&nbsp;als&nbsp;auch&nbsp;der&nbsp;User<br>
+stehen.<br>
+Um&nbsp;die&nbsp;jeweilige&nbsp;Sprache&nbsp;zu&nbsp;unterstützen,&nbsp;wird&nbsp;als&nbsp;Funktion<br>
+_&nbsp;(gettext)&nbsp;aufgerufen.</tt></dd></dl>
+ <dl><dt><a name="-n"><strong>n</strong></a>()</dt><dd><tt>name:<br>
+&nbsp;<br>
+Diese&nbsp;Funktion&nbsp;gibt&nbsp;den&nbsp;Namen&nbsp;der&nbsp;Datei&nbsp;zurück&nbsp;(mit&nbsp;Pfad).</tt></dd></dl>
+ <dl><dt><a name="-pa"><strong>pa</strong></a>()</dt><dd><tt>package:<br>
+&nbsp;<br>
+Hier&nbsp;wird&nbsp;das&nbsp;Package&nbsp;des&nbsp;Benutzers&nbsp;zurückgegeben.<br>
+Es&nbsp;sollte&nbsp;sowas&nbsp;wie&nbsp;"de.ljedamus"&nbsp;zurückgegeben&nbsp;werden.<br>
+Das&nbsp;wird&nbsp;in&nbsp;Java-Dateien&nbsp;benötigt&nbsp;(siehe&nbsp;"vim_java_neu.py"):<br>
+Heißt&nbsp;die&nbsp;Java-Datei&nbsp;beispielsweise<br>
+/home/leander/tmp/de/ljedamus/mypack/pack1/mypack.java<br>
+so&nbsp;wird&nbsp;folgendes&nbsp;gesetzt:<br>
+package&nbsp;de.ljedamus.mypack.pack1;</tt></dd></dl>
+ <dl><dt><a name="-sr"><strong>sr</strong></a>(reg, str)</dt><dd><tt>SetRegister:<br>
+&nbsp;<br>
+:param&nbsp;str&nbsp;reg:<br>
+&nbsp;&nbsp;Das&nbsp;Register&nbsp;("a"-"z"),&nbsp;das&nbsp;gesetzt&nbsp;werden&nbsp;soll.<br>
+&nbsp;<br>
+:param&nbsp;str&nbsp;str:<br>
+&nbsp;&nbsp;Der&nbsp;String,&nbsp;der&nbsp;mit&nbsp;dem&nbsp;Register&nbsp;aufgerufen&nbsp;werden&nbsp;soll.<br>
+&nbsp;&nbsp;Beispiele&nbsp;sind&nbsp;in&nbsp;den&nbsp;vim_(sprachkürzel)_enter.py-Dateien<br>
+&nbsp;&nbsp;zu&nbsp;finden.<br>
+&nbsp;<br>
+Diese&nbsp;Funktion&nbsp;setzt&nbsp;das&nbsp;vi-Register&nbsp;reg&nbsp;auf&nbsp;den&nbsp;String&nbsp;str.<br>
+Der&nbsp;String&nbsp;str&nbsp;wird&nbsp;dazu&nbsp;escaped&nbsp;(siehe&nbsp;Funktion&nbsp;<a href="#-escape">escape</a>(str)).<br>
+Wenn&nbsp;das&nbsp;Register&nbsp;reg="a"&nbsp;ist,&nbsp;dann&nbsp;kann&nbsp;man&nbsp;das&nbsp;Register&nbsp;mit<br>
+@a&nbsp;abrufen.</tt></dd></dl>
+ <dl><dt><a name="-ww"><strong>ww</strong></a>()</dt><dd><tt>www:<br>
+&nbsp;<br>
+Hier&nbsp;wird&nbsp;die&nbsp;Web-Adresse&nbsp;des&nbsp;Benutzers&nbsp;zurückgegeben.<br>
+Es&nbsp;sollte&nbsp;sowas&nbsp;wie&nbsp;"<a href="http://www.ljedamus.de/">http://www.ljedamus.de/</a>"&nbsp;zurückgegeben<br>
+werden.<br>
+Das&nbsp;wird&nbsp;in&nbsp;HTML-Dateien&nbsp;benötigt&nbsp;(siehe&nbsp;"vim_html_neu.py").</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>dn</strong> = 'ou=kottenheim,dc=ljedamus,dc=de'<br>
+<strong>dt</strong> = 'Saturday, 21. November 2020 13:30'<br>
+<strong>e</strong> = NO_SUCH_OBJECT({'desc': 'No such object'},)<br>
+<strong>email</strong> = ''<br>
+<strong>i</strong> = 'leander'<br>
+<strong>l</strong> = &lt;ldap.ldapobject.SimpleLDAPObject instance&gt;<br>
+<strong>package</strong> = ''<br>
+<strong>scriptname</strong> = 'pyvim.py'<br>
+<strong>scriptpath</strong> = '/home/leander/.vim/python'<br>
+<strong>trans</strong> = &lt;gettext.GNUTranslations instance&gt;<br>
+<strong>www</strong> = ''<br>
+<strong>y</strong> = '2020'</td></tr></table>
+</body></html>
