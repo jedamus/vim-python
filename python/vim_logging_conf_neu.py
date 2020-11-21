@@ -2,7 +2,7 @@
 # coding=utf-8 -*- python -*-
 
 # erzeugt Freitag, 20. November 2020 15:40 (C) 2020 von Leander Jedamus
-# modifiziert Samstag, 21. November 2020 08:43 von Leander Jedamus
+# modifiziert Samstag, 21. November 2020 09:28 von Leander Jedamus
 # modifiziert Freitag, 20. November 2020 15:55 von Leander Jedamus
 
 """
@@ -26,7 +26,7 @@ p.b()[0:0] = [
 "keys=stdoutHandler,fileHandler,rotateFileHandler,nullHandler",
 "",
 "[formatters]",
-"keys=stdFormatter",
+"keys=stdFormatter,shortFormatter",
 "",
 "[logger_root]",
 "level=DEBUG",
@@ -57,7 +57,7 @@ p.b()[0:0] = [
 "[handler_stdoutHandler]",
 "class=StreamHandler",
 "level=DEBUG",
-"formatter=stdFormatter",
+"formatter=shortFormatter",
 "args=(sys.stdout,)",
 "",
 "[handler_rotateFileHandler]",
@@ -75,6 +75,9 @@ p.b()[0:0] = [
 "[formatter_stdFormatter]",
 "format=%(asctime)s %(name)-10s %(levelname)-8s: %(message)s",
 "datefmt=%d.%m.%Y %H:%M:%S %Z",
+"",
+"[formatter_shortFormatter]",
+"format=%(name)-10s %(levelname)-8s: %(message)s",
 ]
 vim.command("normal 56k")
 
