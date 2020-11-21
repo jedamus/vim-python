@@ -2,6 +2,7 @@
 # coding=utf-8 -*- python -*-
 
 # erzeugt Freitag, 20. November 2020 15:40 (C) 2020 von Leander Jedamus
+# modifiziert Samstag, 21. November 2020 08:43 von Leander Jedamus
 # modifiziert Freitag, 20. November 2020 15:55 von Leander Jedamus
 
 """
@@ -32,16 +33,16 @@ p.b()[0:0] = [
 "handlers=fileHandler,stdoutHandler",
 "",
 "[logger___main__]",
-"level=INFO",
-"#level=DEBUG",
+"level=DEBUG",
+"#level=INFO",
 "handlers=fileHandler,stdoutHandler",
 "#handlers=nullHandler",
 "qualName=__main__",
 "propagate=0",
 "",
 "[logger_module]",
-"#level=DEBUG",
-"level=INFO",
+"level=DEBUG",
+"#level=INFO",
 "handlers=fileHandler,stdoutHandler",
 "#handlers=nullHandler",
 "qualName=module",
@@ -51,7 +52,7 @@ p.b()[0:0] = [
 "class=FileHandler",
 "level=DEBUG",
 "formatter=stdFormatter",
-"args=(\"logger.log\", \"w\")",
+"args=(\"logger.log\", \"a\")",
 "",
 "[handler_stdoutHandler]",
 "class=StreamHandler",
@@ -72,7 +73,7 @@ p.b()[0:0] = [
 "args=()",
 "",
 "[formatter_stdFormatter]",
-"format=%(asctime)s %(name)s %(levelname)s: %(message)s",
+"format=%(asctime)s %(name)-10s %(levelname)-8s: %(message)s",
 "datefmt=%d.%m.%Y %H:%M:%S %Z",
 ]
 vim.command("normal 56k")
