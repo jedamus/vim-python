@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+# erzeugt Montag, 14. Dezember 2020 14:29 (C) 2020 von Leander Jedamus
+# modifiziert Montag, 14. Dezember 2020 14:34 von Leander Jedamus
+
+vim=$HOME/.vim
+
+cd $HOME
+ln -sf $vim/vimrc2 .vimrc
+cp -p $vim/.exrc $HOME
+
+# vim:ai sw=2
+
