@@ -2,7 +2,7 @@
 # coding=utf-8 -*- python -*-
 
 # erzeugt Freitag, 20. November 2020 15:40 (C) 2020 von Leander Jedamus
-# modifiziert Samstag, 21. November 2020 09:28 von Leander Jedamus
+# modifiziert Samstag, 21. November 2020 14:41 von Leander Jedamus
 # modifiziert Freitag, 20. November 2020 15:55 von Leander Jedamus
 
 """
@@ -35,6 +35,9 @@ p.b()[0:0] = [
 "[logger___main__]",
 "level=DEBUG",
 "#level=INFO",
+"#level=WARNING",
+"#level=ERROR",
+"#level=CRITICAL",
 "handlers=fileHandler,stdoutHandler",
 "#handlers=nullHandler",
 "qualName=__main__",
@@ -79,7 +82,7 @@ p.b()[0:0] = [
 "[formatter_shortFormatter]",
 "format=%(name)-10s %(levelname)-8s: %(message)s",
 ]
-vim.command("normal 56k")
+vim.command("normal 62k")
 
 # vim:ai sw=2 sts=4 expandtab
 
