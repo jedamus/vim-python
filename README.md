@@ -14,6 +14,6 @@ file structure:
 You have to decide if you use install2.sh OR install3.sh
 
 This depends on which command vim uses to execute a python script.
-On my Ubuntu 16.04 LTS it is py3file (so use ./install3.sh)
-On my Mac it is pyfile (so use ./install2.sh).
+On my Ubuntu 16.04 LTS it is "py3file" (so use ./install3.sh)
+On my Mac it is "pyfile" (so use ./install2.sh).
 
