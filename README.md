@@ -18,15 +18,18 @@ On my Mac it is "pyfile" (so use ./install2.sh).
 ## Annotations
 
 You need the package variable in java-files. Try the following:
+
 ```
   mkdir -p tmp/de/ljedamus/mypack/pack1
   cd tmp/de/ljedamus/mypack/pack1
   vi test.java
 ```
+
 Now you see that package is set according to the package variable, which is set
 to de.ljedamus
 
 The other variables (www and email) are used for example in .html files.
+
 ```
 cd tmp
 vi test.html
