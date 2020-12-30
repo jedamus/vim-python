@@ -4,6 +4,13 @@ Python scripts for use with vim
 These are a collection of python-scripts, which work with vim (if compiled so).
 They give a structure to new files (for example perl.pl). Existing files get a date and time stamp and the user, who edited the file. The information is taken from the GECOS-Field.
 
+
+Perhaps you have to do the following first:
+
+```
+sudo apt install python-ldap python-qt4
+```
+
 ## Getting started
 
 file structure:
