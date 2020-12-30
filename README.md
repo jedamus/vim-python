@@ -8,7 +8,7 @@ They give a structure to new files (for example perl.pl). Existing files get a d
 Perhaps you have to do the following first:
 
 ```
-sudo apt install python-ldap python-qt4
+sudo apt install vim python-ldap python-qt4
 ```
 
 ## Getting started
