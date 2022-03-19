@@ -13,6 +13,8 @@ CH=pyvim
 cp -vp $vim/vimrc2 $HOME/.vimrc
 cp -vp $vim/.exrc $HOME
 
+cd $vim/python
+
 if [ -z $3 ]; then
   if [ -f ${CH}.modify_me ]; then
     read -p "What is your email-address (ljedamus@web.de): " email
@@ -30,8 +32,6 @@ else
   www="$2"
   package="$3"
 fi
-
-cd $vim/python
 
 if [ -f ${CH}.modify_me ]; then
   echo "modifying ${CH}.modify_me to ${CH}.py"
