@@ -1,2 +1,14 @@
 autocmd BufNewFile *.f pyfile ~/.vim/python/vim_f_neu.py
 autocmd BufWritePre *.f pyfile ~/.vim/python/vim_f_geaendert.py
+autocmd BufNewFile *.for pyfile ~/.vim/python/vim_f_neu.py
+autocmd BufWritePre *.for pyfile ~/.vim/python/vim_f_geaendert.py
+autocmd BufNewFile *.f77 pyfile ~/.vim/python/vim_f90_neu.py
+autocmd BufWritePre *.f77 pyfile ~/.vim/python/vim_f90_geaendert.py
+autocmd BufNewFile *.f90 pyfile ~/.vim/python/vim_f90_neu.py
+autocmd BufWritePre *.f90 pyfile ~/.vim/python/vim_f90_geaendert.py
+autocmd BufNewFile *.f95 pyfile ~/.vim/python/vim_f90_neu.py
+autocmd BufWritePre *.f95 pyfile ~/.vim/python/vim_f90_geaendert.py
+autocmd BufNewFile *.f03 pyfile ~/.vim/python/vim_f90_neu.py
+autocmd BufWritePre *.f03 pyfile ~/.vim/python/vim_f90_geaendert.py
+autocmd BufNewFile *.f08 pyfile ~/.vim/python/vim_f90_neu.py
+autocmd BufWritePre *.f08 pyfile ~/.vim/python/vim_f90_geaendert.py
