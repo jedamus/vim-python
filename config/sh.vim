@@ -8,3 +8,7 @@ autocmd BufNewFile *.bash pyfile ~/.vim/python/vim_sh_neu.py
 autocmd BufWritePre *.bash pyfile ~/.vim/python/vim_sh_geaendert.py
 autocmd BufNewFile *.zsh pyfile ~/.vim/python/vim_zsh_neu.py
 autocmd BufWritePre *.zsh pyfile ~/.vim/python/vim_sh_geaendert.py
+autocmd BufNewFile *.ksh pyfile ~/.vim/python/vim_sh_neu.py
+autocmd BufWritePre *.ksh pyfile ~/.vim/python/vim_sh_geaendert.py
+autocmd BufNewFile *.mksh pyfile ~/.vim/python/vim_sh_neu.py
+autocmd BufWritePre *.mksh pyfile ~/.vim/python/vim_sh_geaendert.py
