@@ -20,7 +20,7 @@
 
 """
   Dieses Skript wird aufgerufen, wenn eine *.sh-, *.csh-,
-  *.tcsh-, *.bash- oder *.zsh-Datei neu erzeugt werden
+  *.tcsh-, *.bash-, *.ksh oder *.mksh-Datei neu erzeugt werden
   soll.
 """
 
@@ -33,7 +33,7 @@ import vim
 import pyvim as p
 
 shell = "sh"
-pfad = "/usr/bin/env "
+pfad = "/usr/bin/env"
 
 if (re.match(r".*\.csh",p.bn())):
   shell = "csh"
@@ -43,8 +43,12 @@ if (re.match(r".*\.bash",p.bn())):
   shell = "bash"
 if (re.match(r".*\.zsh",p.bn())):
   shell = "zsh"
+if (re.match(r".*\.ksh",p.bn())):
+  shell = "ksh"
+if (re.match(r".*\.mksh",p.bn())):
+  shell = "mksh"
 
-p.b()[0:0] = [ "#!{pfad:s}{shell:s}".format(pfad=pfad,shell=shell),
+p.b()[0:0] = [ "#!{pfad:s} {shell:s}".format(pfad=pfad,shell=shell),
                "",
                "# {cb:s}".format(cb=p.cb()),
 	       "",
