@@ -33,12 +33,12 @@ import vim
 import pyvim as p
 
 shell = "sh"
-pfad = "/usr/bin/env "
+pfad = "/usr/bin/env"
 
 if (re.match(r".*\.zsh",p.bn())):
   shell = "zsh"
 
-p.b()[0:0] = [ "#!{pfad:s}{shell:s}".format(pfad=pfad,shell=shell),
+p.b()[0:0] = [ "#!{pfad:s} {shell:s}".format(pfad=pfad,shell=shell),
                "",
                "# {cb:s}".format(cb=p.cb()),
 	       "",
