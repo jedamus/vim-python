@@ -12,3 +12,5 @@ autocmd BufNewFile *.ksh py3file ~/.vim/python/vim_sh_neu.py
 autocmd BufWritePre *.ksh py3file ~/.vim/python/vim_sh_geaendert.py
 autocmd BufNewFile *.mksh py3file ~/.vim/python/vim_sh_neu.py
 autocmd BufWritePre *.mksh py3file ~/.vim/python/vim_sh_geaendert.py
+autocmd BufNewFile *.dash py3file ~/.vim/python/vim_sh_neu.py
+autocmd BufWritePre *.dash py3file ~/.vim/python/vim_sh_geaendert.py

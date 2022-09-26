@@ -47,6 +47,8 @@ if (re.match(r".*\.ksh",p.bn())):
   shell = "ksh"
 if (re.match(r".*\.mksh",p.bn())):
   shell = "mksh"
+if (re.match(r".*\.dash",p.bn())):
+  shell = "dash" 
 
 p.b()[0:0] = [ "#!{pfad:s} {shell:s}".format(pfad=pfad,shell=shell),
                "",
