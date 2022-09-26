@@ -2,6 +2,8 @@
 # encoding=utf-8
 
 # created Montag, 31. Dezember 2012 07:57 (C) 2012-2019 by Leander Jedamus
+# modifiziert Montag, 28. März 2022 10:20 von Leander Jedamus
+# modifiziert Mittwoch, 23. Dezember 2020 10:04 von Leander Jedamus
 # modified Donnerstag, 19. November 2020 09:07 by Leander Jedamus
 # modifiziert Sonntag, 27. September 2020 01:35 von Leander Jedamus
 # modifiziert Sonntag, 26. Mai 2019 12:30 von Leander Jedamus
@@ -39,20 +41,19 @@ import inspect
 import pwd
 import gettext
 
+"""
+  Hier sollten Sie Ihre Default-Werte einsetzen!
+  Vor allem, wenn Sie keine Datenbank betreiben wollen.
+"""
+www = "http://www.ljedamus.de/"
+email = "ljedamus@web.de"
+package = "de.ljedamus"
+
 try:
   import MySQLdb as mdb
   """ Die Werte werden erst dann geladen, wenn sie auch benötigt werden.  """
-  www = ""
-  email = ""
-  package = ""
 except ImportError:
-  """
-    Hier sollten Sie Ihre Default-Werte einsetzen!
-    Vor allem, wenn Sie keine Datenbank betreiben wollen.
-  """
-  www = "www.jedamus-solutions.de"
-  email = "ljedamus@web.de"
-  package = "de.jedamus-solutions"
+  pass
 
 """ Das hier funktioniert nur in vim: """
 import vim
