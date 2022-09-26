@@ -1,5 +1,5 @@
 # erzeugt Dienstag, 21. Mai 2019 17:50 (C) 2019 von Leander Jedamus
-# modifiziert Montag, 26. September 2022 14:55 von Leander Jedamus
+# modifiziert Montag, 26. September 2022 15:29 von Leander Jedamus
 # modifiziert Samstag, 21. November 2020 13:22 von Leander Jedamus
 # modifiziert Samstag, 26. September 2020 21:49 von Leander Jedamus
 # modifiziert Freitag, 31. Mai 2019 09:32 von Leander Jedamus
@@ -15,6 +15,7 @@ include Makefile.documentation
 DOC		    = pyvim.html pyvimldap.html
 
 DOC		    += vim_py_neu.html
+DOC		    += vim_ipy_neu.html
 DOC		    += vim_py_enter.html
 DOC		    += vim_py_geaendert.html
 DOC		    += vim_logging_conf_neu.html
