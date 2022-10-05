@@ -24,7 +24,7 @@ So start ```vim``` and enter
 
 If the command is not “implemented”, try entering ```:pyfile``` and press ENTER. If the error message says something about “argument required”, the command to use is “pyfile”.
 
-If both commands don’t work, you on your own. You can download the vim sources and compile them with python support..
+If both commands don’t work, you are on your own. You can download the vim sources and compile them with python support..
 
 On my Ubuntu 16.04 LTS the command is "py3file" (so use ./install3.sh):
 
