@@ -18,7 +18,15 @@ file structure:
 You have to decide if you use install2.sh OR install3.sh
 
 This depends on which command vim uses to execute a python script.
-On my Ubuntu 16.04 LTS it is "py3file" (so use ./install3.sh):
+
+So start ```vim``` and enter
+```:py3file``` and press RETURN. If the error message says something about “argument required”, the command is “py3file”.
+
+If the command is not “implemented”, try entering ```:pyfile``` and press ENTER. If the error message says something about “argument required”, the command to use is “pyfile”.
+
+If both commands don’t work, you on your own. You can download the vim sources and compile them with python support..
+
+On my Ubuntu 16.04 LTS the command is "py3file" (so use ./install3.sh):
 
 ```
 sh ./install3.sh
