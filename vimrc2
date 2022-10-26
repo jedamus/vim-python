@@ -95,5 +95,8 @@ if !exists("autocommands_loaded")
 
   " fuer yacc oder bison:
   source ~/.vim/config/yacc.vim
+
+  " fuer rust:
+  source ~/.vim/config/rust.vim
 endif
 

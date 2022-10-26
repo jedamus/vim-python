@@ -1,4 +1,5 @@
 # erzeugt Dienstag, 21. Mai 2019 17:50 (C) 2019 von Leander Jedamus
+# modifiziert Mittwoch, 26. Oktober 2022 10:36 von Leander Jedamus
 # modifiziert Montag, 26. September 2022 15:29 von Leander Jedamus
 # modifiziert Samstag, 21. November 2020 13:22 von Leander Jedamus
 # modifiziert Samstag, 26. September 2020 21:49 von Leander Jedamus
@@ -92,6 +93,10 @@ DOC		    += vim_lex_geaendert.html
 DOC		    += vim_rb_neu.html
 DOC		    += vim_rb_enter.html
 DOC		    += vim_rb_geaendert.html
+
+DOC		    += vim_rust_neu.html
+#DOC		    += vim_rb_enter.html
+DOC		    += vim_rust_geaendert.html
 
 all::		    $(DOC)
 		    @echo done.
