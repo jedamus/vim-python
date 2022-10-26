@@ -20,7 +20,7 @@ You have to decide if you use install2.sh OR install3.sh
 This depends on which command vim uses to execute a python script.
 
 So start ```vim``` and enter
-```:py3file``` and press RETURN. If the error message says something about “argument required”, the command is “py3file”.
+```:py3file``` and press RETURN. If the error message says something about “argument required”, the command to use is “py3file”.
 
 If the command is not “implemented”, try entering ```:pyfile``` and press ENTER. If the error message says something about “argument required”, the command to use is “pyfile”.
 
