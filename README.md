@@ -13,7 +13,7 @@ sudo apt install vim python-ldap python-qt4
 ```
 
 file structure:
-~/.exrc ~/.vimrc ~/.vim/config ~/.vim/python
+~/.exrc ~/.vimrc ~/.vim ~/.vim/config ~/.vim/config3 ~/.vim/python
 
 You have to decide if you use install2.sh OR install3.sh
 
