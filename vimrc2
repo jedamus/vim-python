@@ -17,6 +17,8 @@ set mouse=a
 "set encoding=utf-8
 "set encoding=iso-8859-1
 
+"set fileencodings=utf-8,iso-8859-1
+
 " mapped F9 auf ctrl-]
 map <F9> <C-]>
 
