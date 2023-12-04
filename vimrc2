@@ -103,5 +103,8 @@ if !exists("autocommands_loaded")
 
   " fuer texinfo:
   source ~/.vim/config/texinfo.vim
+
+  " fuer Modula-2:
+  source ~/.vim/config/modula2.vim
 endif
 
