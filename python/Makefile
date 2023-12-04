@@ -1,4 +1,5 @@
 # erzeugt Dienstag, 21. Mai 2019 17:50 (C) 2019 von Leander Jedamus
+# modifiziert Donnerstag, 10. August 2023 21:20 von Leander Jedamus
 # modifiziert Mittwoch, 26. Oktober 2022 10:36 von Leander Jedamus
 # modifiziert Montag, 26. September 2022 15:29 von Leander Jedamus
 # modifiziert Samstag, 21. November 2020 13:22 von Leander Jedamus
@@ -95,8 +96,20 @@ DOC		    += vim_rb_enter.html
 DOC		    += vim_rb_geaendert.html
 
 DOC		    += vim_rust_neu.html
-#DOC		    += vim_rb_enter.html
+#DOC		    += vim_rust_enter.html
 DOC		    += vim_rust_geaendert.html
+
+DOC		    += vim_texinfo_neu.html
+#DOC		    += vim_texinfo_enter.html
+DOC		    += vim_texinfo_geaendert.html
+
+DOC		    += vim_mod_neu.html
+DOC		    += vim_mod_enter.html
+DOC		    += vim_mod_geaendert.html
+
+DOC		    += vim_def_neu.html
+#DOC		    += vim_def_enter.html
+DOC		    += vim_def_geaendert.html
 
 all::		    $(DOC)
 		    @echo done.
