@@ -100,5 +100,8 @@ if !exists("autocommands_loaded")
 
   " fuer rust:
   source ~/.vim/config/rust.vim
+
+  " fuer texinfo:
+  source ~/.vim/config/texinfo.vim
 endif
 
