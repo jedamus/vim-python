@@ -4,3 +4,6 @@ autocmd BufEnter *.pas py3file ~/.vim/python/vim_pas_enter.py
 autocmd BufNewFile *.pp py3file ~/.vim/python/vim_pp_neu.py
 autocmd BufWritePre *.pp py3file ~/.vim/python/vim_pas_geaendert.py
 autocmd BufEnter *.pp py3file ~/.vim/python/vim_pas_enter.py
+autocmd BufNewFile *.p py3file ~/.vim/python/vim_p_neu.py
+autocmd BufWritePre *.p py3file ~/.vim/python/vim_pas_geaendert.py
+autocmd BufEnter *.p py3file ~/.vim/python/vim_pas_enter.py
