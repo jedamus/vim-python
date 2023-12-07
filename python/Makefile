@@ -1,4 +1,5 @@
 # erzeugt Dienstag, 21. Mai 2019 17:50 (C) 2019 von Leander Jedamus
+# modifiziert Mittwoch, 06. Dezember 2023 08:21 von Leander Jedamus
 # modifiziert Montag, 04. Dezember 2023 23:32 von Leander Jedamus
 # modifiziert Donnerstag, 10. August 2023 21:20 von Leander Jedamus
 # modifiziert Mittwoch, 26. Oktober 2022 10:36 von Leander Jedamus
@@ -32,6 +33,7 @@ DOC		    += vim_pm_geaendert.html
 
 DOC		    += vim_pas_neu.html
 DOC		    += vim_pp_neu.html
+DOC		    += vim_p_neu.html
 DOC		    += vim_pas_enter.html
 DOC		    += vim_pas_geaendert.html
 
